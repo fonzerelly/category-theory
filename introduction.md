@@ -3,63 +3,39 @@
 Christian H&ouml;rauf<br>
 <img src="images/twitter.png" width="5%"><sup>@fonzygruen</sup>
 
-Note: Hello welcome to this talk. Before we begin I would like to tell you a little story from
+Note: 
+Heil Sauron,
+willkommen zu dieser einmaligen Veranstaltung der Bruderschaft Saurons. Wie sie sicherlich wissen, war Sauron der Herrscher über Mittelerde bis zwei unsägliche Hobbits es wagten seinen Ring der Macht im Schicksalsberg zu zerstören. Peter Jackson hat die Ereignisse seiner Zeit in einer fast 12-Stündigen Dokumentation festgehalten wo sie die Geschehnisse gut nachvollziehen können.
 
-??HORIZONTAL
-Note:
-Wer von Euch kennt "Der Herr der Ringe"? Wer von Euch mag "Der Herr der Ringe"? Wer von Euch durchblickt die ganze Story?
+Wie dem auch sei, sie sind heute hier erschienen um die Grundlagen von Saurons Macht kennen zu lernen: die Kategorientheorie. 
 
+Nun ich werde mich bemühen auf die wichtigsten Aspekte einzugehen, jedoch bin ich sicher, dass wir in der kurzen Zeit lediglich die Spitze des Eisbergs streifen können.
 
-Eben. 
-
-<!-- ??HORIZONTAL
-### Spoiler-Alert
-Note:
-* Da ist erst mal Bilbo, der in einem frühreren Abenteuer einen ominösen Ring von Gollum geklaut hat
-* Weil der Ring ihn Böse macht zwingt ihn der Zauberer Gandalf den Ring an seinen AdoptivSohn Frodo abzutreten
-* Sauron, der ursprünglicher Besitzer des Rings und oberster Düsterling der Geschichte, der auch nicht die Ersitzung des Rings (gem# §927 BGB) akzeptiert, weiß inzwischen wer den Ring hat und läßt seine fießen 9 Reiter nach Frodo suchen.
-
-* Gandalf dieses ahnt, schickt er Frodo mit seinen Freunden Sam, Pipin und Merry auf eine tollkühne Reise
-
-* In bruchtal schließen sich ihnen der Zwerg Gimli, der Elf Legolas, und die beiden Menschen Boromir und Aragon an.
-* Sie sollen den Ring zum Schicksalsberg nach Mordor, dem direkten Einzugsgebiet Saurons bringen um ihn dort in der Lava des Berges zu zerstören.
-* Leider hat sich Saruman der Weise Sauron angeschlossen und zwingt die Gefährten sich durch die Hölen von Moria
-* Dort wird vermeintdlich Gandalf von einem Ballrock getötet und kurz darauf Boromir von Orks. So kommt es zum Zerfall der Gemeinschaft. 
--> Frodo und Sam machen sich Richtung Mordor auf
--> -->
 ??VERTICAL
-## Spoiler Alert
+# Bild von Nerds aus den 70gern
 Note:
-* Sauron, der Oberbösewicht dieser Geschichte, unterwirft mittels eines magischen Rings alle Völker Mittelerdes
-*  Isildur, Prinz des Menschengeschlechts, erlangt durch einen Zufall diesen Ring
-* Der Ring entzieht sich Isildurs Zugriff und wird von Deagol gefunden
-* Smeagol erschlägt Daegol und stiehlt den Ring
-* Unter dem Einfluss des Rings wird aus Smeagol Gollum
-* Bilbo Beutlin findet den Ring
-* Er Schenkt ihn durch Gandalfs überredungskunst seinem Ziehson Frodo
-* Gandalf schickt Frodo und seinen Freund Sam los um den Ring in Schicksalsberg in Mordor zu vernichten
-* Auf dem Weg dorthin treffen sie auf Gollum, der Ihnen den Ring entwenden will
-* Da Frodo zu lange unter dem Einfluß des Ringes stand bringt er es nicht fertig ihn zu vernichten, was dann durch einen dummen Zufall Gollum zuteil wird.
+Uns ist es gelungen, den Menschen Sand in die Augen zu streuen. Sie glauben zu großen Teilen noch heute, dass sie Ihre Magie in kleinsten Schritten wirken und "imperativ" programmieren müssen. So als würden sie auch jeden ihrer Herzschläge bewusst ausführen. Sauron, der letzte der Maia, wäre nie so töhricht gewesen. 
 
+??VERTICAL
+# Bild von Sauron
+Note:
+Er wuste die abstrakten, arkanen Kräfte zu verstehen und zu lenken.
+Und so frage ich Euch:
+* Wollt ihr Euch zu den Göttern aufschwingen?
+* Wollt auch ihr erfahren, wie die Macht hinter der Macht funktioniert?
+* Wollt ihr die Wurzeln leicht wartbarer funktionaler Software kennen lernen?
 
-Ende...
 
 
 ??VERTICAL
-## ?
-
-Note:
-Wer soll das noch kappieren? wir brauchen da erstmal mehr Ordnung. Aber wie können wir das Ding ordnen? Dafür scheint es viel zu komplex. Es sei denn wir finden eine Art arkanes Wissen, eine alte Magie die uns zu Hilfe eilt um dieses Wirrwar zu vereinfachen. 
-
-??VERTICAL
-## Vow
+## Bild des Rings
 * Ein Ring, sie zu knechten, <!-- .element: class="fragment" -->
 * sie alle zu finden, <!-- .element: class="fragment" -->
 * ins Dunkel zu treiben <!-- .element: class="fragment" -->
 * und ewig zu binden. <!-- .element: class="fragment" -->
 
 Note:
-Doch bevor ich Euch dieses arkane Wissen zuteil werden lasse, müsst ihr erst auf den Ring schwören. So sprecht mir nach:
+So sprecht mir nach:
 Ein Ring, sie zu knechten ...
 sie alle zu finden, ...
 ins Dunkel zu treiben, ...
@@ -68,8 +44,7 @@ und ewig zu binden. ...
 ??VERTICAL
 Euripides: "Jeder Mann ist wie die Gesellschaft, die er gewöhnlich führt"
 Note: 
-Nun da Eure Seelen so schwarz sind wie der Schatten Saurons, kann ich Euch erklären, was Category Theory, die Macht hinter allem anderen, ist.
-Dabei handelt es sich um eine Theorie mathematischer Strukturen. Euripides hat mal gesagt: "Jeder Mann ist wie die Gesellschaft, die er gewöhnlich führt". Das ist auch die Idee, die die Grundlage von CategoryTheory legt. Wenn man ein Objekt einer Kategorie identifizierren möchte betrachtet man das Muster seiner Beziehungen zu anderen Objekten.
+Nun da Eure Seelen so schwarz sind wie der Schatten Saurons, kann ich Euch verraten: Die wahre Natur der Dinge erkennt man nicht durch die Dinge selbst sondern durch deren Beziehungen zu anderen Dingen.
 
 ??VERTICAL
 ## Kategorie
@@ -77,70 +52,146 @@ Dabei handelt es sich um eine Theorie mathematischer Strukturen. Euripides hat m
 * Morphismen
 
 Note: 
-Eine Kategorie besteht also aus seinen Objekten und sog. Morphismen, die die verschiedenen Objekte miteinander verbinden. 
+In der Magie sprechen wir also von Objekten und von Morphismen, welhe die Objekte in Beziehung setzen.
+Eine Kategorie besteht also aus seinen Set von Objekten und sog. Morphismen, die die verschiedenen Objekte miteinander verbinden. 
 
 ??VERTICAL
 ## Kategorie
 * Objekte == Datentypen
 * Morphismen == Funktionen
 Note: 
-Auch wenn Category Theory auf viele verschiedene Gebiete anwendbar ist, für uns Softwareentwickler entsprechen die Objekte einer Kategorie Datentypen und die Morphismen sind die Funktionen die einen konkreten Wert eines Datentyps in den Wert eines anderen Datentypes transformieren. Wenn ich also im weiteren von Objekten spreche meine ich NICHT die Objekte, von denen man in OOP-Sprachen spricht.
-
-??VERTICAL
-## Kategorie
-* Objekte == Datentypen
-* Morphismen == Funktionen
-* Assoziativgesetz
-Note: 
-Dabei gilt für diese Morphismen das Assoziativgesetz.
-
-??VERTICAL
-(2 + 3) + 5 = 2 + (3 + 5)
-Note:
-Zur Erinnerung, das Assoziativgesetz besagt z.B. bei der Addition, dass keine Rolle spielt welche Summanten ich zuerst miteinandenr verechne, es kommt immer das gleiche heraus. NICHT zu verwechseln mit dem Kommutativgesetz, demzufolge es egal wäre in welcher Reihenfolge die Summanten zu addieren sind.
-
-??VERTICAL
-(f &ordm; g) &ordm; h = f &ordm; (g &ordm; h)
-Note:
-Wenn ich also die Funktionen f, g und h habe, dann spielt es keine Rolle ob ich g mit f  verbinde oder ob ich g mit h verbinde. Wenn alle Funktionen ausgeführt werden kommt das gleiche heraus.
+Eure Mathematiker verwenden diese Termini auch bezogen auf alle möglichen Umstände. Wir werden uns hier auf auf den Software-Bereich konzentrieren, in dem Objekte Datentypen entsprechen und Morphimen sind die Funktionen, welche von einem Datentyp in einen anderen konvertieren. 
 
 ??VERTICAL
 ``` Typescript
-function compose<T, U, V> (fn1: (input: T) => U, fn2: (input: U) => V): (input:T) => V {
+const inc = (x: number): number => x + 1;
+const isOdd = (value: number): boolean => x % 2 === 1;
+```
+Note:
+Macht zeichnet sich nicht dadurch aus, dass man eine große, komplexe Funktion schreibt. Macht bedeutet eine komplexe Funktion aus vielen kleinen übeschaubaren Funktionen zusammen zu setzen.
+
+??VERTICAL
+isOdd &ordm; inc
+
+Note:
+Wenn ich also zuerst die Inkrement-Funktion ausführe und dann die isOdd-Funktion, sagt man in der Mathematik
+isOdd nach inc.
+
+??VERTICAL
+``` Typescript
+const isNextOdd = compose<number, number, boolean>(
+  isOdd,
+  inc
+);
+```
+Note:
+Entsprechend sagen wir im Typescript-Kontext: Die Funktionen inc und isOdd wurden "composed", also kombiniert, zu isNextOdd.
+Dieses compose, wie sieht das unter der Haube aus?
+
+??VERTICAL
+``` Typescript
+const compose<T, U, V> = (
+  fn1: (input: T) => U, 
+  fn2: (input: U) => V
+): (input:T) => V {
     return function(value: T) {
         return fn2(fn1(value))
     } 
 }
-
-function size (s: string): number { return s.length; }
-
-function isEven(x: number): boolean { return x % 2 === 0; }
-
-const evenSize = compose(size, isEven);
 ```
-Note: Eine solche Verbindung nennt man Funktionskomposition, die eine bessere Code Wiederverwendung gewährleistet, als es Vererbung könnte.
-Hier sehen wir eine einfache compose-Funktion mit Typescript geschrieben. Wie man sieht kommen hier generics zum Einsatz. Sobald Eure Programmiersprache Generics anbietet  könnt ihr von Category Theory profitieren. Noch besser sind compose-Funktionen, die beliebig viele Funktionen entgegen nehmen und diese miteinander kombinieren. 
+Note: 
+Wir sehen hier eine Funktion die selbst eine Funktion zurück liefert, in der beide Eingabefunktionen aufgerufen werden.
+Dieses Miracel nennt man HigherOrder-Function.
+Doch vergesst niemals...
 
 ??VERTICAL
-gollum -> bilbo -> frodo
-gollum -> frodo
+| Pure          | Impure        |
+| ------------- |:-------------:|
+| (x) => x + 1  | Math.random() |
 
 Note:
-So gesehen hätte man sich auch den Film "Der Hobbit" komplett sparen können. 
+Ihr bezieht nur Macht aus den Funktionen wenn sie rein sind. So rein wie die Herzen der Elben. Links sehen wir eine Funktion welche bei jedem Aufruf mit dem gleichen Parameter das gleiche Ergebnis liefert. Rechts sehen wir eine Funktion, die vom sog. seed abhängt, quasi einer globalen Variablen. Dies nennt man auch Seiteneffekt. Dieser steht nicht unter unserer Kontrolle und sollte damit soweit Möglich vermieden werden. 
 
 ??VERTICAL
 ## Kategorie
 * Objekte == Datentypen
 * Morphismen == Funktionen
 * Assoziativgesetz
-* neutrale Element == Identity
+Note: 
+Aber wir wissen, dass wir keine absolute Kontrolle erlangen können, denn unser Programm soll ja Ausgaben machen und produziert damit zwangsläufig Seiteneffekte. 
+Um so dringlicher, dass wir alle relevanten Gesetzmäßigkeiten einhalten. Genauer gesagt das sog. Assoziativgesetz. 
+
+
+??VERTICAL
+(2 + 3) + 5 = 2 + (3 + 5)
 Note:
-Schließlich brauchen wir ein neutrales Element, welches sich nicht auswirkt.
+Die Bruderschaft Saurons weiß, dass ihr Menschen schon längst das Wissen aus Eurer Grundschulzeit verdrängt habt. Zur Erinnerung, das Assoziativgesetz besagt z.B. bei der Addition, dass es keine Rolle spielt welche Summanten ich zuerst miteinandenr verechne, es kommt immer das gleiche heraus. NICHT zu verwechseln mit dem Kommutativgesetz, demzufolge es egal wäre in welcher Reihenfolge die Summanten zu addieren sind.
+
+??VERTICAL
+(f &ordm; g) &ordm; h = f &ordm; (g &ordm; h)
+Note:
+Bezogen auf das Verknüpfen von Funktionen bedeutet das, dass es wie in diesem Beispiel egal ist ob wir f nach g komponieren und dann h oder ob wir g nach h kommponieren und dieses mit f. In beiden Fällten entsteht die exakt gleiche Funktion. 
+
+??VERTICAL
+#Ringbesitzer
+
+Sauron ------------>Gollum -----------> Bilbo -------------------> Frodo
+       Silmarillion         Der Hobbit         Der Herr der Ringe
+
+                    Gollum --------------------------------------> Frodo
+Note:
+Oder ander ausgedrückt hätte Peter Jackson sich auch die Trillogie "Der Hobbit" komplett sparen können...
+
+??VERTICAL
+Note:
+Wir haben jetzt gesehen, wie man Funktionen kombinieren und dadurch ersetzen kann. Dadurch dass hier die Assoziativität gilt, können wir mathematisch gesicherte Schlüsse ziehen:
+
+
+??VERTICAL
+#Partition friendly
+Note:
+Z.B. können wir die Aufgabe besser Portionieren. Wenn Gimli in 10 Minuten zwei Orks abschlachtet und Legolas 17, dann können wir später ihre Ergebnisse zusammenführen. Wir könnten also für Gimli und für Legolas unterschiedliche Threads anlegen, in denen Sie Orks erledigen. 
+
+??VERTICAl
+#Incremental
+Note:
+Oder wir bearbeiten das Problem inkrementell. Wir könnten Gimli vielleicht sogr ein Zeitfenster einrichten, in dem er die Orks nach Wertgegenständen untersucht, während Legolas jeden ankommenden Ork erlegt.
+
+
+
+
+??VERTICAL
+## Kategorie
+* Objekte == Datentypen
+* Morphismen == Funktionen
+* Assoziativgesetz
+* neutrale Element
+Note:
+Ein letztes Gesetz fehlt Euch Menschen noch, die Macht Saurons zu verstehen. In einer Kategorie wird ein neutrales Element. Und wer spielt in Mittelerde eine so neutrale Rolle,dass Peter Jackson ihn noch nicht mal in seiner Dokumentation erwähnt?
+
+??VERTICAL
+#Tom Bombadil
+Note:
+Richtig Tom Bombadil, der angeblich schon da war bevor mein Meister Sauron auf den Plan tratt - lächerlich. Der angeblich nicht anfällig für die Macht des Rings war - unmöglich. Der stehts Pilze konsumierende Nichtsnutz - was auch sonst... Aber gut, auch ihn brauchen wir um eine Kategorie zu konstruieren.
 
 ??VERTICAL
 5 + 0 = 5
 Note:
-Ähnlich der Rolle die die Null bei der Adition einnimmt...
+Das neutrale Element wirkt sich nicht auf eine Operation aus. So wie sich z.B. auch die Addition mit der 0 nicht auswirkt, bleibt auch die Anwendung einer Identity-Function ohne Folgen: 
+
+??VERTICAL
+f &ordm; identity = f
+
+in Typescript
+``` Typescript
+function identity<T> (x: T): T {
+    return x;
+}
+
+const isAlsoOdd = compose(isOdd, identity)
+const isAlsoOdd2 = compose(identity, isOdd)
+```
+Wir sehen also, dass 
 
 ??VERTICAL
 8 * 1 = 8
