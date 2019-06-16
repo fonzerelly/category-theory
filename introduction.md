@@ -186,15 +186,62 @@ Ihm Gegenüber steht Gollum, der in seiner Einfallt und Schwäche nicht nur den 
 Alle Pfeile zeigen damit auf ihn und kein weitere Pfeil zeigt von ihm weg. Damit können wir in Terminal Object nenne.
 
 ??VERTICAL 
-# Pointerumkehr
+# Duality
 Note:
 An dieser Stelle erkennen wir einen weiteren Teil der arkanen Macht. Aus jeder Struktur von Objekten und Morphismen die wir erkennen können lässt sich auch immer eine Umgekehrte Struktur, eine Co-St  ruktur ermitteln indem man einfach die Pfeile der Struktur umdreht.
 So konnten wir z.B. aus dem Initial-Object auch das Terminal-Object ableiten.
 
 ??VERTICAL
 # ProductType -> Frodo und Sam
+
+                      C
+                    /  \
+                  fst   snd
+                  /  |   \
+                A - AxB - B
 Note:
-Ein weiteres Beispiel bieten diese miesen kleinen Hobbits Frodo und Sam. Man bekommt sie nur im Doppelpack. Klar gelang es einem der Nazghul sie kurzzeitig zu trennen, aber die meiste Zeit 
+Ein weiteres Beispiel bieten diese miesen kleinen Hobbitse Frodo und Sam. Man bekommt sie nur im Doppelpack. Klar gelang es einem der Nazghul sie kurzzeitig zu trennen, aber die meiste Zeit weichen Sie keinen Meter voneinander. Man kann sie also als ein eigenes Objekt betrachten, obwohl sie trennbar sind. Man nennt sowas ProductType, weil sich so gewonnene Datentyp-Kompositionen als Mal-Operation betrachten kann. 
+
+??VERTICAL
+``` Typescript
+class Coordinate <T> {
+    x: T;
+    y: T;
+}
+```
+Note:
+Ihr kennt so einen Datentyp aus der Schule als Carthesische Koordinaten.
+
+So, was mag wohl herauskommen, wenn man hier die Pfeile umdreht?
+
+TODO: 
+Recherchiere nochmal wie sich der ProductType als Mal-Operation darstellen lässt.
+
+
+??VERTICAL
+#SUMTYPE
+                      
+                A - AxB - B
+                  \  |   /
+                  ?     ?
+                    \  /
+                      C
+
+Note:
+Das Gegenteil des ProductTypes, das CoProduct ist der sog. SumType. Im Gegensatz zum Product wo zwei Objekte gleichzeitig referenziert werden konnten, repräsentiert ein SumType ein Objekt, welches zwei Ausprägungen hat. Gollum ist ein gutes Beispiel dafür, weil er sich immer mit sich selbst unterhält, mal als guter Smeagol mal als böser Gollum. 
+
+??VERTICAL
+``` Typescript
+
+class Either<T,U> {
+    value: T|U  
+}
+
+```
+
+
+Note:
+In der Programmierung spricht man von einem Either
 
 ??VERTICAL
 ## Gollum -> Bilbo -> Frodo
@@ -220,10 +267,13 @@ Rewrite identity in TypeScript
 
 
 ??VERTICAL
-## Agenda
-* Extreme Ownership
-* Discipline <!-- .element: class="fragment" -->
-* The Good Leader <!-- .element: class="fragment" -->
-* Decentralized Command <!-- .element: class="fragment" -->
-* Prioritize <!-- .element: class="fragment" -->
-* Summary <!-- .element: class="fragment" -->
+## Ideen
+* Was ergibt sich aus der Assoziativität?
+ * Partition Friendly -> ich kann Dinge aufteilen 
+    -> Gimly nimmt die 10 Orks, Legolas die anderen 10
+ * Incremental -> Ich kann eines nach dem anderen bearbeiten
+    -> Legolas feuert einen Pfeil nach dem anderen auf die Orks ab
+* Funktor -> Separation of concerns
+  * What to do (function to map)
+  * When to do it (Functor  )
+  
