@@ -52,7 +52,7 @@ Nun da Eure Seelen so schwarz sind wie der Schatten Saurons, kann ich Euch verra
 * Morphismen
 
 Note: 
-In der Magie sprechen wir also von Objekten und von Morphismen, welhe die Objekte in Beziehung setzen.
+In der Magie sprechen wir also von Objekten und von Morphismen, welche die Objekte in Beziehung setzen.
 Eine Kategorie besteht also aus seinen Set von Objekten und sog. Morphismen, die die verschiedenen Objekte miteinander verbinden. 
 
 ??VERTICAL
@@ -60,7 +60,7 @@ Eine Kategorie besteht also aus seinen Set von Objekten und sog. Morphismen, die
 * Objekte == Datentypen
 * Morphismen == Funktionen
 Note: 
-Eure Mathematiker verwenden diese Termini auch bezogen auf alle möglichen Umstände. Wir werden uns hier auf auf den Software-Bereich konzentrieren, in dem Objekte Datentypen entsprechen und Morphimen sind die Funktionen, welche von einem Datentyp in einen anderen konvertieren. 
+Eure Mathematiker verwenden diese Termini auch bezogen auf alle möglichen Umstände. Wir werden uns hier auf auf den Software-Bereich konzentrieren, in dem Objekte Datentypen entsprechen und Morphismen sind die Funktionen, welche von einem Datentyp in einen anderen konvertieren. 
 
 ??VERTICAL
 ``` Typescript
@@ -68,7 +68,7 @@ const inc = (x: number): number => x + 1;
 const isOdd = (value: number): boolean => x % 2 === 1;
 ```
 Note:
-Macht zeichnet sich nicht dadurch aus, dass man eine große, komplexe Funktion schreibt. Macht bedeutet eine komplexe Funktion aus vielen kleinen übeschaubaren Funktionen zusammen zu setzen.
+Macht zeichnet sich nicht dadurch aus, dass man eine große, komplexe Funktion schreibt. Macht bedeutet eine komplexe Funktion aus vielen kleinen überschaubaren Funktionen zusammen zu setzen.
 
 ??VERTICAL
 isOdd &ordm; inc
@@ -137,10 +137,9 @@ Bezogen auf das Verknüpfen von Funktionen bedeutet das, dass es wie in diesem B
 
 Sauron ------------>Gollum -----------> Bilbo -------------------> Frodo
        Silmarillion         Der Hobbit         Der Herr der Ringe
-
                     Gollum --------------------------------------> Frodo
 Note:
-Oder ander ausgedrückt hätte Peter Jackson sich auch die Trillogie "Der Hobbit" komplett sparen können...
+Oder anders ausgedrückt hätte Peter Jackson sich auch die Trillogie "Der Hobbit" komplett sparen können...
 
 ??VERTICAL
 Note:
@@ -150,14 +149,12 @@ Wir haben jetzt gesehen, wie man Funktionen kombinieren und dadurch ersetzen kan
 ??VERTICAL
 #Partition friendly
 Note:
-Z.B. können wir die Aufgabe besser Portionieren. Wenn Gimli in 10 Minuten zwei Orks abschlachtet und Legolas 17, dann können wir später ihre Ergebnisse zusammenführen. Wir könnten also für Gimli und für Legolas unterschiedliche Threads anlegen, in denen Sie Orks erledigen. 
+Z.B. können wir die Aufgabe besser portionieren. Bei eine Unmenge von Orks könnten wir Gimly 20 Orks zuweisen und Legolas 20 andere Orks. Wenn Gimli in 10 Minuten zwei Orks abschlachtet und Legolas 17, dann spielt das für das Gesamtergebnis keine Rolle. Da es sich Wir könnten also für Gimli und für Legolas unterschiedliche Threads anlegen, in denen Sie Orks erledigen. 
 
 ??VERTICAl
 #Incremental
 Note:
 Oder wir bearbeiten das Problem inkrementell. Wir könnten Gimli vielleicht sogr ein Zeitfenster einrichten, in dem er die Orks nach Wertgegenständen untersucht, während Legolas jeden ankommenden Ork erlegt.
-
-
 
 
 ??VERTICAL
@@ -167,12 +164,12 @@ Oder wir bearbeiten das Problem inkrementell. Wir könnten Gimli vielleicht sogr
 * Assoziativgesetz
 * neutrale Element
 Note:
-Ein letztes Gesetz fehlt Euch Menschen noch, die Macht Saurons zu verstehen. In einer Kategorie wird ein neutrales Element. Und wer spielt in Mittelerde eine so neutrale Rolle,dass Peter Jackson ihn noch nicht mal in seiner Dokumentation erwähnt?
+Ein letztes Gesetz fehlt Euch Menschen noch, die Macht Saurons zu verstehen. In einer Kategorie wird ein neutrales Element benötigt. Und wer spielt in Mittelerde eine so neutrale Rolle, dass selbst Peter Jackson ihn noch nicht mal in seiner Dokumentation erwähnt?
 
 ??VERTICAL
 #Tom Bombadil
 Note:
-Richtig Tom Bombadil, der angeblich schon da war bevor mein Meister Sauron auf den Plan tratt - lächerlich. Der angeblich nicht anfällig für die Macht des Rings war - unmöglich. Der stehts Pilze konsumierende Nichtsnutz - was auch sonst... Aber gut, auch ihn brauchen wir um eine Kategorie zu konstruieren.
+Richtig Tom Bombadil, der angeblich schon da war bevor mein Meister Sauron auf den Plan trat - lächerlich. Der angeblich nicht anfällig für die Macht des Rings war - unmöglich. Der stets Pilze konsumierende Nichtsnutz - was auch sonst... Aber gut, auch ihn brauchen wir um eine Kategorie zu konstruieren.
 
 ??VERTICAL
 5 + 0 = 5
@@ -181,6 +178,8 @@ Das neutrale Element wirkt sich nicht auf eine Operation aus. So wie sich z.B. a
 
 ??VERTICAL
 f &ordm; identity = f
+Note:
+f nach identity entspricht f
 
 in Typescript
 ``` Typescript
@@ -193,19 +192,6 @@ const isAlsoOdd2 = compose(identity, isOdd)
 ```
 Wir sehen also, dass 
 
-??VERTICAL
-8 * 1 = 8
-Note:
-... der der 1 bei der Multiplikation muss es auch beim verbinden von Funktionen ein Neutrales Element geben:
-
-??VERTICAL
-``` Typescript
-function identity<T> (x: T): T {
-    return x;
-}
-```
-Note:
-die Identity-Function, welche nichts weiter tut als ihren Eingabeparameter zurück zu geben.
 
 ??VERTICAL
 f &ordm; identity = f
@@ -217,10 +203,87 @@ NICHT MEIN SCHATZZZ!!!
 <img src="images/gollum-angry.jpg" width="100%">
 Note:
 Bevor jetzt Eure Augen genauso so groß werden, weil ihr Euch fragt: "Wozu sollte ich so eine nichtsnützige Funktion brauchen?!?" lasst mich noch erwähnen, dass die Römer zwar viel geleistet haben, aber da sie kein neutrales Element wie die Null kannten blieb ihnen das Rechnen mit Unbekannten verborgen. Und wo wären wir heute ohne Algebra?
+Ihr werdet die Bedeutung eines neutralen Elements noch zu schätzen lernen...
 
 ??VERTICAL
+<img src="images/sauron-eye.jpg">
+Note: 
+Denn wenn ihr dem Meister gegenüber tretet, solltet ihr unbedingt wissen, was ein Monoid ist. 
+
+??VERTICAL
+# Monoid
+* ein Datentyp <!-- .element: class="fragment" -->
+* append  <!-- .element: class="fragment" -->
+* Assoziativ  <!-- .element: class="fragment" -->
+* neutrales Element  <!-- .element: class="fragment" -->
+Note:
+Ein Monoid ist sehr ähnlich einer Kategorie. Allerdings ist er auf einen Datentypen eingeschränkt und daher binhaltet er auch nur einen Morphismus, den man Append nennt.
+
+??VERTICAL
+``` Typescript
+interface Monoid<T> {
+    append (a: T, b:T): T
+    neutral: T;
+}
+```
 
 Note:
+In Typescript kann man das z.B. mit einem Interface abbilden. Was aber besonders hervorsticht ist, dass einen Monoid also immer der Datentyp, als auch die dazugehörige append-Funktion auszeichnet.
+
+??VERTICAL
+``` Typescript
+class Sum implements Monoid<number> {
+    append(a: number, b: number) {
+        return a + b
+    }
+    neutral: number = 0
+}
+
+const sum = new Sum();
+sum.append(3, 4); // 7
+assert( sum.append(5, sum.neutral) === 5 );
+```
+Note:
+Beispielsweise gibt es für den Datentyp number den Monoid Sum. Er definiert die append-Methode mit der addition und dem neutralen Element 0;
+
+??VERTICAL
+``` Typescript
+class Multiply implements Monoid<number> {
+    append(a: number, b: number ) {
+        return a * b
+    }
+    neutral: number = 1;
+}
+
+const mult = new Multiply();
+mult.append(3, 4); // 12
+assertEqual(mult.append(5, mult.neutral) === 5);
+```
+Note:
+Aber genauso kann man für number auch den Monoid Multiply definnieren. Man beachte, dass hier das neutrale Element eben nicht mehr die 0 ist, sondern die 1.
+
+??VERTICAL
+``` Typescript
+const factorialOf5 = [1,2,3,4,5]
+  .reduce(mult.append, mult.neutral) // 120
+```
+Note:
+Daher eignen sich Monoide besonders für das Zusammenführen von Daten.
+Die Falt-Operation, in Typescript Arrays eher als reduce bekannt erwartet z.B. genau so eine append-Funktion und ein neutrales Element.
+
+??VERTICAL
+``` Typescript
+const keyValuePairs: [string, number][] = [['a', 1], ['b', 2]];
+const object = keyValuePairs.reduce((obj, pair) => {
+    obj[pair[0]] = pair[1]
+    return obj;
+}, {}); // {a: 1, b: 2}
+```
+Note:
+Vermutlich habt ihr sogar schon mal Monoide on the fly definiert ohne es zu wissen. Hier besteht unser Monoid aus dem Datentyp "Key-Value-Pair" und einer Append-Funktion die aus den Key-Value-Pairs ein Objekt-Literal konstruiert. 
+Das neutrale Element ist hier natürlich das leere Objekt. 
+
+
 Jetzt wissen wir also was eine Kategorie ist, und welche Regeln erfüllt sein müssen um von einer Kategorie zu sprechen. Sehen wir uns ein paar Beispiele an, wie man solche Beziehungsgeflechte Kategorisiert:
 
 ??VERTICAL
