@@ -30,7 +30,165 @@
                      data-separator-notes="^Note:"
                      data-charset="UTF-8">
                 </section>
-                
+                <section>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: <mark>(a -> b) -> [a] -> [b]</mark>
+                            map _ []       = []
+                            map f (x: xs)  = f x : map f xs
+    
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: <mark>(a -> b)</mark> -> [a] -> [b]
+                            map _ []       = []
+                            map f (x: xs)  = f x : map f xs
+    
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> <mark>[a]</mark> -> [b]
+                            map _ []       = []
+                            map f (x: xs)  = f x : map f xs
+    
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> <mark>[b]</mark>
+                            map _ []       = []
+                            map f (x: xs)  = f x : map f xs
+    
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map <mark>_ []       = []</mark>
+                            map f (x: xs)  = f x : map f xs
+    
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map _ []      = []
+                            map f (<mark>x</mark>: xs) = <mark>f x</mark> : map f xs
+    
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map _ []       = []
+                            map f (x: <mark>xs</mark>)  = f x : <mark>map f xs</mark>
+    
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Empty case</h3>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map <mark>_</mark> []       = []
+                            map f (x: xs)  = f x : map f xs 
+                        
+                            map <mark>(f . g)</mark> [] = []
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Empty case</h3>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map _ []       = <mark>[]</mark>
+                            map f (x: xs)  = f x : map f xs 
+                        
+                            map (f . g) [] = <mark>[]</mark>
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Empty case</h3>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map _ []       = []
+                            map f (x: xs)  = f x : map f xs 
+                        
+                            map (f . g) [] = []
+
+                            (map f . map g) [] = map f ( map g [] ) -- expand composition
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Empty case</h3>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            <mark>map _ []</mark>       = []
+                            
+                            map f (x: xs)  = f x : map f xs 
+                        
+                            map (f . g) [] = []
+
+                            (map f . map g) [] = map f ( <mark>map g []</mark> )
+                                               = map f []
+                    </code></pre>
+                </section>
+                <section>
+                        <h3>Empty case</h3>
+                        <pre><code class="lang-Haskell" data-trim data-noescape>
+                                map :: (a -> b) -> [a] -> [b]
+                                map _ []       = <mark>[]</mark>
+                                map f (x: xs)  = f x : map f xs 
+                            
+                                map (f . g) [] = []
+    
+                                (map f . map g) [] = map f ( map g [] )
+                                                   = map f <mark>[]</mark>
+                        </code></pre>
+                    </section>
+                <section>
+                    <h3>Empty case</h3>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            <mark>map _ []</mark>       = []
+                            map f (x: xs)  = f x : map f xs 
+                        
+                            map (f . g) [] = []
+
+                            (map f . map g) [] = map f ( map g [] )
+                                               = <mark>map f []</mark>
+                                               = []
+                    </code></pre>
+                </section>
+                <section>
+                        <h3>Empty case</h3>
+                        <pre><code class="lang-Haskell" data-trim data-noescape>
+                                map :: (a -> b) -> [a] -> [b]
+                                map _ []       = []
+                                map f (x: xs)  = f x : map f xs 
+                            
+                                map (f . g) [] = <mark>[]</mark>
+    
+                                (map f . map g) [] = map f ( map g [] )
+                                                   = map f []
+                                                   = <mark>[]</mark>
+                        </code></pre>
+                    </section>
+
+                <section>
+                    <h3>Empty case</h3>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map _ []      = <mark>[]</mark>
+                            map f (x: xs)  = f x : map f xs 
+                        
+                            map (f . g) [] = []
+
+                            (map f . map g) [] = map f ( map g [] )
+                                                = map f <mark>[]</mark>
+                    </code></pre>
+                </section>
                 <section>
                     <h1>Thank you</h1>
                     <br><br>

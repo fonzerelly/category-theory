@@ -60,7 +60,7 @@ Eine Kategorie besteht also aus seinen Set von Objekten und sog. Morphismen, die
 * Objekte == Datentypen
 * Morphismen == Funktionen
 Note: 
-Eure Mathematiker verwenden diese Termini auch bezogen auf alle möglichen Umstände. Wir werden uns hier auf auf den Software-Bereich konzentrieren, in dem Objekte Datentypen entsprechen und Morphismen sind die Funktionen, welche von einem Datentyp in einen anderen konvertieren. 
+Eure Mathematiker verwenden diese Termini auch bezogen auf alle möglichen Umstände.  Wie z.B.  (siehe category theory alltag) Wir werden uns hier auf auf den Software-Bereich konzentrieren, in dem Objekte Datentypen entsprechen und Morphismen sind die Funktionen, welche von einem Datentyp in einen anderen konvertieren. 
 
 ??VERTICAL
 ``` Typescript
@@ -126,6 +126,9 @@ Um so dringlicher, dass wir alle relevanten Gesetzmäßigkeiten einhalten. Genau
 (2 + 3) + 5 = 2 + (3 + 5)
 Note:
 Die Bruderschaft Saurons weiß, dass ihr Menschen schon längst das Wissen aus Eurer Grundschulzeit verdrängt habt. Zur Erinnerung, das Assoziativgesetz besagt z.B. bei der Addition, dass es keine Rolle spielt welche Summanten ich zuerst miteinandenr verechne, es kommt immer das gleiche heraus. NICHT zu verwechseln mit dem Kommutativgesetz, demzufolge es egal wäre in welcher Reihenfolge die Summanten zu addieren sind.
+
+??VERTICAL
+ Beispiel Kommutativ gesetzt Nicht auf Funktionen anwendbar
 
 ??VERTICAL
 (f &ordm; g) &ordm; h = f &ordm; (g &ordm; h)
@@ -217,7 +220,7 @@ Denn wenn ihr dem Meister gegenüber tretet, solltet ihr unbedingt wissen, was e
 * Assoziativ  <!-- .element: class="fragment" -->
 * neutrales Element  <!-- .element: class="fragment" -->
 Note:
-Ein Monoid ist sehr ähnlich einer Kategorie. Allerdings ist er auf einen Datentypen eingeschränkt und daher binhaltet er auch nur einen Morphismus, den man Append nennt.
+Ein Monoid ist sehr ähnlich einer Kategorie. Allerdings ist er auf einen Datentypen eingeschränkt und daher binhaltet er auch nur einen Morphismus, also einen Homomorphismus  den man Append nennt.
 
 ??VERTICAL
 ``` Typescript
@@ -280,8 +283,34 @@ const object = keyValuePairs.reduce((obj, pair) => {
 }, {}); // {a: 1, b: 2}
 ```
 Note:
+Durch das neutrale Element könnt ihr es Euch sparen zwischen einem leeren Element und einem gefüllten Element zu unterscheiden. Ihr müsst einfach nur mit dem neutralen Element beginnen und appended es an die Daten die da kommen. 
 Vermutlich habt ihr sogar schon mal Monoide on the fly definiert ohne es zu wissen. Hier besteht unser Monoid aus dem Datentyp "Key-Value-Pair" und einer Append-Funktion die aus den Key-Value-Pairs ein Objekt-Literal konstruiert. 
 Das neutrale Element ist hier natürlich das leere Objekt. 
+
+<!-- ??VERTICAL
+#Polyjuice Portion
+Note:
+Ah verdammt, falsches Universum, aber richtige Idee. Bei Harry Potter und die Kammer des Schreckens verwandelt sich Harry Potter in Goyle, einem Kumpan seines Erzfeindes Malfoy, um letzteren unbemerkt auszuspionieren. Er schafft das durch den sog. Vielsafttrank, welcher sich neben einigen exotischen Zutaten auch ein Haar desjenigen enthalten muss, in den man sich verwandeln möchte. Wichtig ist hierbei, dass dieses Haar die letzte Zutat ist, die hinzugefügt werden muss. D.h. durch eine klitzekleine Anpassung kann man völlig unterschiedliche ausprägungen erreichen. Genau dass was ihr in Euren Programmen auch wollt.
+
+??VERTICAL
+# Monoid
+* ein Datentyp
+* append  
+* Assoziativ  
+* neutrales Element  
+* *Kommutativ* <!-- .element: class="fragment" -->
+<!-- 
+Note:
+Nun ist ein Monoid per definition nicht zwingend kommutativ aber niemand verbietet uns, unseren Monoiden um Kommutativität zu erweitern. Quasi so als hätten wir noch die letzte fehlende Zutat in den Vielsafttrank hinzugefügt damit er wirkt. Das bedeutet, dass wir nicht nur nach belieben uns die Arbeit im Programm einteilen können, wir können nun auch die Reihenfolge ignorieren, in der die Arbeit vollzogen wird. --> -->
+
+<!-- ??VERTICAL
+# kommutative Monoiden in der Praxis
+* Logging-System <!-- .element: class="fragment" -->
+<!-- * Graphic-Operationen .element: class="fragment" -->
+<!-- * Event-Streams -->
+<!-- * ...
+Note:
+Wir können uns also wie bereits angedeutet das Assoziativ-Gesetzt zunutze machen um die Abarbeitung eines Programms besser zu steuern, wenn wir uns klar machen was sich alles wie ein Monoid verhält. Ein Datenstrom z.B., einträge in einer Datenbank, Netzwerkzugriffe. (nochmal prüfen was ) --> -->
 
 
 Jetzt wissen wir also was eine Kategorie ist, und welche Regeln erfüllt sein müssen um von einer Kategorie zu sprechen. Sehen wir uns ein paar Beispiele an, wie man solche Beziehungsgeflechte Kategorisiert:
@@ -356,6 +385,103 @@ class Either<T,U> {
 
 Note:
 In der Programmierung spricht man von einem Either
+
+
+??VERTICAL
+# Ring
+* Menge ()
+* 2 Verknüfungen (product sum)
+* Assoziativität (sum, product)
+* neutrales Element (sum)
+* inverses Element (sum)
+* Kommutativität
+* Distributivität (links- und rechtsseitig) (prduct)
+
+
+??VERTICAL
+# Functors
+Note:
+Ihr Menschen seht also die Macht des Rings manifestiert sich in Form von MetaDatentypen. Jedoch erscheint ein Objekt stets in seinem Inneren verborgen. Wie also  damit aggieren?
+
+
+??VERTICAL
+# Frodo without Ring
+Note:
+Hier sehen wir Frodo wie er erst noch in der normalen Welt existiert und von einem NazGuhl bedroht wird.
+Vor Angst steckt er sich den Ring an den Finger und verschwindet in der normalen Welt, ... 
+
+??VERTICAL
+# Frodo with Ring
+Note:
+... aber in einer art Parallelwelt taucht er wieder auf. Dort sind alle Dinge dort wie in der realen Welt, aber die NazGuhl sieht Frodo hier demaskiert als die neun Könige, deren Seelen Sauron einst durch die Ringe in seinen Bann schlug. 
+
+??VERTICAL
+# Functor
+Note:
+Das ist auch das was Eure Mathematiker unter einem Funktor verstehen: Das alle Objekte einer Kategory und deren morphismen sich in eine andere Kategory übertragen lassen.  Jedoch müssen eben diese Zusammenhänge, also die Morphismen erhalten bleiben. Das fmap entspricht hier dem Ring
+
+??VERTICAL
+* fmap identity = identity
+* fmap (f &ordm; g) == fmap f &ordm; g
+Note:
+1. Wenn die Identity-Funktion gemapt wird ist das das gleiche wie die identity Funktion
+2. Wenn zwei komponierte Funktionenen in die andere Kategory gemappt werden, ist dass das Gleiche wie wenn ich eine gemappte Version von f mit einer gemappten Version von g verknüpfe.
+
+??VERTICAL
+``` Typescript
+const inc = (x) => x + 1;
+const isOdd = (x) => x % 2 === 1;
+
+[1,2,3]
+  .map(inc)
+  .map(isOdd) // ungünstig zweimal über Liste iterriert
+
+```
+Note:
+Was heißt dass nun für Euch und Eure kleinen miesen Programmierproblemchen...
+
+Wir betrachten wieder unsere inc und unsere isOdd-Funktion. Ich kann beide nacheinander auf meine Eingabemenge anwenden und erhalte mein gewünschtes Ergebnis. Aber seit Euch bewust, Eure Macht ist stets begrenzt. Nutzt Eure Macht weise. Hier würdet ihr unnötig Eure Kraft verschwenden weil ihr zwei mal über die Liste iterieren müsst. 
+
+??VERTICAL
+``` Typescript
+const inc = (x) => x + 1;
+const isOdd = (x) => x % 2 === 1;
+const isNextOdd = compose(isOdd, inc)
+[1,2,3]
+  .map(isNextOdd) // liefert das gleiche Ergebnis, aber es muss nur einaml iteriert werden.
+```
+Note:
+Wenn ihr statt dessen aus inc und isOdd wie vorher schon in isNextOdd kombiniert und damit über die Eingangsliste mapped bekommt ihr das gleiche Ergebnis aber es muss nur einmal iteriert werden.
+
+??VERTICAL
+# Equational Reasoning 
+Note:
+
+IDEEN:
+-- Was lässt sich als Monoid verstehen (Netzerwerk, Datenbank, ... )
+-- Either und Tuple bilden also + und * operation von Datentypen. Damit haben wir neben assoziativität und Neutralem Element beinahe alle Elemente die wir für einen Ring benötigen. 
+** was Zeichnet einen RIng noch aus?
+--DAmit haben wir die Macht alle Datentypen zu erstellen, die wir uns vorstellen können:
+
+Listen, Promises, whatso ever.
+
+Funktoren:
+Welche gesetze gelten für Funktoren zusätzlich?
+
+Problem:
+
+[1,2,3].map(inc).map(time2)
+Doof - zweimal über liste iteriert. Aber moment mal 
+da waren doch noch die Funktor gesetze: Das hieße ja:
+
+[1,2,3].map(inc).map(time2) === [1,2,3].map(compose(time2, inc))
+
+
+Wie cool ist dass denn. Heißt das ich kann hier mathematisch beweisen, dass meine Performance Optimierung keine Auswirkung hat?
+
+<beweis der funktoren gesetze für Liste>
+
+Bevor ihr mich noch überflügelt mach ich hier schluss...
 
 ??VERTICAL
 ## Gollum -> Bilbo -> Frodo
