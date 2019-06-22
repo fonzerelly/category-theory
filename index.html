@@ -190,6 +190,123 @@
                     </code></pre>
                 </section>
                 <section>
+                    <h3>Filled case</h3>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map _ []      = []
+                            map f (x: xs)  = f x : map f xs 
+                        
+                            map <mark>(f . g)</mark> (<mark>x</mark>: xs) = <mark>(f . g) x</mark> : map (f . g) xs
+
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Filled case</h3>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map _ []      = []
+                            map f (x: xs)  = f x : map f xs 
+                        
+                            <mark>map (f . g)</mark> (x: <mark>xs</mark>) = (f . g) x : <mark>map (f . g) xs</mark>
+
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Filled case</h3>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map _ []      = []
+                            map f (x: xs)  = f x : map f xs 
+                        
+                            map (f . g) (x: xs) = (f . g) x : map (f . g) xs
+                            
+                            (map f . map g) (x: xs) = map f (map g (x:xs)) -- expand composition
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Filled case</h3>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map _ []      = []
+                            <mark>map f (x: xs)  = f x : map f xs </mark>
+                        
+                            map (f . g) (x: xs) = (f . g) x : map (f . g) xs
+                        
+                            (map f . map g) (x: xs) = map f (map g (x:xs))
+                                                    = map f (<mark>g x: map g xs</mark>)
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Filled case</h3>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map _ []      = []
+                            <mark>map f (x: xs)  = f x : map f xs </mark>
+                        
+                            map (f . g) (x: xs) = (f . g) x : map (f . g) xs
+                        
+                            (map f . map g) (x: xs) = map f (map g (x:xs))
+                                                    = map f (g x: map g xs)
+                                                    = <mark>f (g x) : map f (map g xs )</mark>
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Filled case</h3>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map _ []      = []
+                            map f (x: xs)  = f x : map f xs
+                        
+                            map (f . g) (x: xs) = (f . g) x : map (f . g) xs
+                        
+                            <mark>(map f . map g)</mark> (x: xs) = map f (map g (x:xs))
+                                                    = map f (g x: map g xs)
+                                                    = f (g x) : map f (map g xs )
+                                                    = (f . g) x : <mark>(map f . map g)</mark> xs
+
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Filled case</h3>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map _ []      = []
+                            map f (x: xs)  = f x : map f xs
+                        
+                            <mark>map (f . g)</mark> (x: xs) = (f . g) x : map (f . g) xs
+                        
+                            (map f . map g) (x: xs) = map f (map g (x:xs))
+                                                    = map f (g x: map g xs)
+                                                    = f (g x) : map f (map g xs )
+                                                    = (f . g) x : (map f . map g) xs
+                                                    = (f . g) x : <mark>map (f . g)</mark> xs
+
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Filled case</h3>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map :: (a -> b) -> [a] -> [b]
+                            map _ []      = []
+                            map f (x: xs)  = f x : map f xs
+                        
+                            map (f . g) (x: xs) = <mark>(f . g) x : map (f . g) xs</mark>
+                        
+                            (map f . map g) (x: xs) = map f (map g (x:xs))
+                                                    = map f (g x: map g xs)
+                                                    = f (g x) : map f (map g xs )
+                                                    = (f . g) x : (map f . map g) xs
+                                                    = <mark>(f . g) x : map (f . g) xs</mark>
+
+                    </code></pre>
+                </section>
+                <section>
+                    <h1>QED</h>
+                    <pre><code class="lang-Haskell" data-trim data-noescape>
+                            map (f . g) (x: xs) = (map f . map g) (x: xs)
+                    </code></pre>
+                </section>
+                <section>
                     <h1>Thank you</h1>
                     <br><br>
                     Christian H&ouml;rauf<br>
