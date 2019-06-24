@@ -1,10 +1,26 @@
 <html>
     <head>
         <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
-        <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
-        <link rel="stylesheet" href="node_modules/reveal.js/css/theme/white.css">
+        <link rel="stylesheet" href="node_modules/reveal.js/lib/css/monokai.css">
+        <link rel="stylesheet" href="node_modules/reveal.js/css/theme/black.css">
         <meta charset="UTF-8">
         <style>
+            body {
+                background-color: black;
+            }
+            .reveal section h1,
+            .reveal section h2,
+            .reveal section h3,
+            .reveal section h4,
+            .reveal section h5,
+            .reveal section h6,
+            .reveal section p,
+            .reveal section table {
+                color: darkred;
+                width: 100%;
+                border: black;
+            }
+            
             .reveal section img {
                 border: 0px;
                 box-shadow: none;
@@ -13,18 +29,16 @@
                 width: 100%;
                 font-size: 75;
             }
+
+            #f--identity--f {
+                text-transform: none;
+            }
         </style>
     </head>
     <body>
         <div class="reveal">
             <div class="slides">
                 <section data-markdown="introduction.md"
-                     data-separator="^\?\?HORIZONTAL"
-                     data-separator-vertical="^\?\?VERTICAL"
-                     data-separator-notes="^Note:"
-                     data-charset="UTF-8">
-                </section>
-                <section data-markdown="discipline.md"
                      data-separator="^\?\?HORIZONTAL"
                      data-separator-vertical="^\?\?VERTICAL"
                      data-separator-notes="^Note:"
@@ -283,7 +297,7 @@
 
                     </code></pre>
                 </section>
-                <section>
+                <section>   
                     <h3>Filled case</h3>
                     <pre><code class="lang-Haskell" data-trim data-noescape>
                             map :: (a -> b) -> [a] -> [b]
@@ -301,7 +315,7 @@
                     </code></pre>
                 </section>
                 <section>
-                    <h1>QED</h>
+                    <h1>QED</h1>
                     <pre><code class="lang-Haskell" data-trim data-noescape>
                             map (f . g) (x: xs) = (map f . map g) (x: xs)
                     </code></pre>
