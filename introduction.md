@@ -351,31 +351,32 @@ Note:
 Jetzt wissen wir also was eine Kategorie ist, und welche Regeln erfüllt sein müssen um von einer Kategorie zu sprechen. Sehen wir uns ein paar Beispiele an, wie man solche Beziehungsgeflechte Kategorisiert:
 
 ??HORIZONTAL
-<table>
-  <tr>
-    <td style="border-bottom: 0px;">
-Initial Object - Sauron
-    </td>
-    <td style="border-bottom: 0px;">
-    &cong; 0
-    </td>
-  </tr>
-</table>
-Note:
-Nehmen wir zum beispiel unseren großen und furchtgebietenden Meister Sauron, dessen waches Auge alles sieht. Er war es, der die großen Ringe erschuf.
-Drei waren den Elben gegeben, sieben den Zwergen und neun den Menschen. Diese Ringe bargen die Stärke jedes Volk zu leiten. Doch sie wurden alle betrogen, denn es wurde noch ein Ring gefertigt. Im Lande Mordor schiedete der Herrscher Sauron heimlich einen Meisterring um alle anderen zu beherrschen. In diesen Ring floß seine bosheit, seine Grausamkeit und sein Wille alles Leben zu unterdrücken.
-Von Ihm gehen alle denkbaren Verknüpfungen aus. Keine endet jedoch dort. In der Kategorientheorie spricht man von einem Initialobjekt.
+## Initial Object
+<img src="images/sauron-fights.gif" width="100%">
 
 ??HORIZONTAL
-<table>
-  <tr>
-    <td style="border-bottom: 0px;">1 &cong; </td>
-    <td style="border-bottom: 0px;">
-Gollum - Terminal
-    </td>
-  <tr>
-</table>
-   
+<img src="images/initial-object-1.jpg">
+
+??HORIZONTAL
+<img src="images/initial-object-2.jpg">
+    
+??HORIZONTAL
+<img src="images/initial-object-3.jpg">
+
+
+??HORIZONTAL
+## Terminal Object
+<img src="images/gollum-falling.gif" width="100%">
+
+??HORIZONTAL
+<img src="images/terminal-object-1.jpg">   
+
+
+??HORIZONTAL
+<img src="images/terminal-object-2.jpg">   
+
+??HORIZONTAL
+<img src="images/terminal-object-3.jpg">   
 Note:
 Ihm Gegenüber steht Gollum, der in seiner Einfallt und Schwäche nicht nur den einen Ring an die unsägichen Hobbits verloren hat, nein auf dem Schicksalsberg hat er den Ring in seiner Gier und Dummheit mit sich in den Tod gerissen.
 Alle Pfeile zeigen damit auf ihn und kein weitere Pfeil zeigt von ihm weg. Damit können wir in Terminal Object nenne.
@@ -384,17 +385,17 @@ Alle Pfeile zeigen damit auf ihn und kein weitere Pfeil zeigt von ihm weg. Damit
 # Duality
 <img src="images/gandalf-vs-saruman.png">
 Note:
-An dieser Stelle erkennen wir einen weiteren Teil der arkanen Macht. Aus jeder Struktur von Objekten und Morphismen die wir erkennen können lässt sich auch immer eine Umgekehrte Struktur, eine Co-St  ruktur ermitteln indem man einfach die Pfeile der Struktur umdreht.
-So konnten wir z.B. aus dem Initial-Object auch das Terminal-Object ableiten.
+Wenn Euer Auge nicht getrübt ist, dann dürftet ihr festgestellt haben, dass der einzige Unterschied zwischen dem Initial - und dem Terminal Object die Richtung der Pfeile ist. Ganz ähnlich wie Saruman und Gandalf zwei Seiten der selben Medaille sind gilt das auch für die Richtung der Pfeile in einer Kategorie. Man spricht hier von Dualität, die für die Kategorientheorie eine handfeste bedeutung hat. Wenn ihr ein Muster des Morphismen-Geflechts findet, dann könnt ihr alleine durch das Umdrehen der Pfeilrichtung noch ein weiteres Muster finden. 
 
 ??HORIZONTAL
-# ProductType -> Frodo und Sam
+# ProductType
+<img src="images/frodo-and-sam.jpg">
 
-                      C
-                    /  \
-                  fst   snd
-                  /  |   \
-                A - AxB - B
+??HORIZONTAL
+<img src="images/product-type.jpg">
+
+??HORIZONTAL
+<img src="images/product-type-set.jpg">
 
 Note:
 Ein weiteres Beispiel bieten diese miesen kleinen Hobbitse Frodo und Sam. Man bekommt sie nur im Doppelpack. Klar gelang es einem der Nazghul sie kurzzeitig zu trennen, aber die meiste Zeit weichen Sie keinen Meter voneinander. Man kann sie also als ein eigenes Objekt betrachten, obwohl sie trennbar sind. Man nennt sowas ProductType, weil sich so gewonnene Datentyp-Kompositionen als Mal-Operation betrachten kann. 
@@ -428,16 +429,16 @@ Recherchiere nochmal wie sich der ProductType als Mal-Operation darstellen läss
 
 
 ??HORIZONTAL
-#SUMTYPE
-                      
-                A - AxB - B
-                  \  |   /
-                  ?     ?
-                    \  /
-                      C
-
+# SUMTYPE
+<img src="images/gollum-good-bad.jpg" width="80%">
 Note:
 Das Gegenteil des ProductTypes, das CoProduct ist der sog. SumType. Im Gegensatz zum Product wo zwei Objekte gleichzeitig referenziert werden konnten, repräsentiert ein SumType ein Objekt, welches zwei Ausprägungen hat. Gollum ist ein gutes Beispiel dafür, weil er sich immer mit sich selbst unterhält, mal als guter Smeagol mal als böser Gollum. 
+
+??HORIZONTAL
+<img src="images/sum-type.jpg">
+
+??HORIZONTAL
+<img src="images/sum-type-set.jpg">
 
 ??HORIZONTAL
 ``` Typescript
@@ -480,44 +481,48 @@ In der Programmierung spricht man von einem Either
 
 ??HORIZONTAL
 # &nbsp;
-* Datentypen <!-- .element: class="fragment" -->
-* 2 Verknüfungen (product sum) <!-- .element: class="fragment" -->
-* Assoziativität (sum, product) <!-- .element: class="fragment" -->
-* neutrales Element ( 0, 1) <!-- .element: class="fragment" -->
+* Objekte = Datentypen <!-- .element: class="fragment" -->
+* Morphismen = product type, sum type <!-- .element: class="fragment" -->
+* Assoziativität <!-- .element: class="fragment" -->
+* neutrales Element = void, ()<!-- .element: class="fragment" -->
 * Distributivität <!-- .element: class="fragment" -->
 
-
-
-
-??HORIZONTAL
-# unitärer Ring  <!-- .element: class="fragment" -->
-* Datentypen
-* 2 Verknüfungen (product sum)
-* Assoziativität (sum, product)
-* neutrales Element ( 0, 1)
-* inverses Element (sum)
+Note:
+Nun ihr Adepten der schwarzen Magie, könnt ihr nochmal zusammenfassen welche Eigenschaften wir nun bereits entdeckt haben? 
+* Unsere Kategorien bestehen aus Datentypen als Objekten
+* Es liegen zwei Morphismen vor, die einen ähnlichen Charakter haben wie Addition und Multiplikation
+* Beide Morphismen unterliegen der Assoziativität, d.h. sie können nach belieben kombiniert werden.
+* Es liegt ein neutrales Element vor, eigentlich sogar für beide Operationen (void für 0 und () für 1)
+* Und der Produkttype unterstüzt die Distributivität
 
 ??HORIZONTAL
-# unitärer Ring
-* Datentypen
-* 2 Verknüfungen (product sum)
-* Assoziativität (sum, product)
-* neutrales Element ( 0, 1)
-* inverses Element (sum)
+# Ring  <!-- .element: class="fragment" -->
+* Objekte = Datentypen
+* Morphismen = product type, sum type
+* Assoziativität 
+* neutrales Element = void, ()
+* Distributivität
+
+Note:
+Könnt ihr es sehen? Könnt ihr die Vollkommenheit Saurons erkennen?    Wie nennen die Mathematiker so ein Konstrukt, das all diese Eigenschaften hat? 
+Wahrhaftig, dass ist ein Ring. 
+Ja, genau das ist der eine Ring der sie alle bindet. Denn das sind die Grundlagen unserer Schulalgebra, mit der wir bereits gelernt haben, beliebig komplexe Funktionen wie Wurzeln oder exponential-Funktionen zu definieren. Und das ist auch der Baukasten mit dem wir beliebige Datentypen binden, also definieren können. Genaugenommen ist es sogar ein Unitärer Ring, da für beide Operationen Addition und Multiplikation ein neutrales Element vorliegt, void als = 0 und () als 1
+
+??HORIZONTAL
+# Ring
+* Objekte = Datentypen
+* Morphismen = product type, sum type
+* Assoziativität 
+* neutrales Element = void, ()
+* Distributivität
 * ~~ Kommutativität ~~   <!-- .element: class="fragment" -->
-* ~~ Distributivität ~~   <!-- .element: class="fragment" -->
+* ~~ Inverse Element ~~   <!-- .element: class="fragment" -->
 
-
-??HORIZONTAL
-# unitärer Ring (naja fast)
-* Datentypen
-* 2 Verknüfungen (product sum)
-* Assoziativität (sum, product)
-* neutrales Element ( 0, 1)
-* inverses Element (sum)
-* ~~ Kommutativität ~~   <!-- .element: class="fragment" -->
-* ~~ Distributivität ~~   <!-- .element: class="fragment" -->
-
+Note: Oder fast. Denn genau  genommen fehlen für einen vollständigen Ring noch weitere Eigenschaften:
+* Kommutativität: Also die Elemente vertauschen zu können 
+* Und das Inverse Element. Bei den ganzen Zahlen gibt es zu jeder positiven Zahl ein weiteres inverses Element -> 2 / -2, etc. 
+Aber was wäre das Gegenteil des Datentyps Integer?
+Nun die Antworten auf diese Fragen hat Sauron mit ins Grab genommen. Eingrund mehr, dass ihr an der Treue zu ihm festhaltet, auf dass wir ihn eines Tages wieder  unter den Lebenden begrüßen dürfen.
 
 ??HORIZONTAL
 # Algebraic Datatypes
@@ -530,14 +535,12 @@ In der Programmierung spricht man von einem Either
 * ... <!-- .element: class="fragment" -->
 
 Note:
-Wir haben also beinahe die gleichen Möglichkeiten für Datentypen wie in der Algebra um Formeln zu definieren. D.h. mit den Möglichkeiten der algebraischen Datentypen können wir so ziemlich alles als Datentypen abbilden was man sich denken kann. Algebraische Datentype verhalten sich quasi wie Container für andere Datentypen, die für den Compiler nachprüfbar bestimmte Grundannahmen über ein Datum ausdrücken. Pairs und Eithers haben wir bereits kennen gelernt.
+Wir haben also beinahe die gleichen Möglichkeiten für Datentypen wie in der Algebra um Formeln zu definieren. D.h. mit den Möglichkeiten der algebraischen Datentypen können wir so ziemlich alles als Datentypen abbilden was man sich denken kann. Algebraische Datentypen verhalten sich quasi wie Container für andere Datentypen, die für den Compiler nachprüfbar bestimmte Grundannahmen über ein Datum ausdrücken. Pairs und Eithers haben wir bereits kennen gelernt.
 Maybes werden genutzt um das Vorhanden sein eines Wertes darzustellen. Damit läßt sich an vielen Stellen im Code auf die lästige Null-Prüfung verzichten.
 Auch Listen sind ein algebraischer Datentyp, sie beschreiben schlicht den Umstand, dass es von einem Datentyp mehr als nur eine Instanz gibt.
 Promises stehen für Werte die irgendwann in der Zukunft verfügbar sein werden.
 Trees bilden hirarchische Strukturen ab.
 usw usw.
-
-
 
 ??HORIZONTAL
 # Functors
@@ -547,9 +550,8 @@ Ihr Menschen seht also die Macht des Rings manifestiert sich in Form von Algebra
 
 
 ??HORIZONTAL
-# Frodo without Ring
-|-----|-----|
-| <img src=">
+# Functor
+<img src="images/functor.png">
 Note:
 Hier sehen wir Frodo wie er erst noch in der normalen Welt existiert und von einem NazGuhl bedroht wird.
 Vor Angst steckt er sich den Ring an den Finger und verschwindet in der normalen Welt, ... 
@@ -558,14 +560,12 @@ Vor Angst steckt er sich den Ring an den Finger und verschwindet in der normalen
 # Frodo with Ring
 
 Note:
-... aber in einer art Parallelwelt taucht er wieder auf. Dort sind alle Dinge dort wie in der realen Welt, aber die NazGuhl sieht Frodo hier demaskiert als die neun Könige, deren Seelen Sauron einst durch die Ringe in seinen Bann schlug. 
+... aber in einer art Parallelwelt taucht er wieder auf. Dort sind alle Dinge dort wie in der realen Welt, aber die NazGuhl sieht Frodo hier demaskiert als die neun Könige, deren Seelen Sauron einst durch die Ringe in seinen Bann schlug. Dann taucht er allerdings in der Parallelwelt des Rings wieder auf. 
 
 ??HORIZONTAL
-# Functor
 
 Note:
-Das ist auch das was Eure Mathematiker unter einem Funktor verstehen: Das alle Objekte einer Kategory und deren morphismen sich in eine andere Kategory übertragen lassen.  Jedoch müssen eben diese Zusammenhänge, also die Morphismen erhalten bleiben. Das fmap entspricht hier dem Ring
-
+Der Ring agiert wie ein Functor. Es müssen 
 ??HORIZONTAL
 I) fmap identity = identity<br><br>
 II) fmap (f &ordm; g)    = fmap f &ordm; g
