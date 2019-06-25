@@ -1,11 +1,12 @@
-## Category Theory - der Ring sie alle zu knechten
+# Category Theory
+## der Ring sie alle zu knechten
 <br><br>
 Christian H&ouml;rauf<br>
 <img src="images/twitter.png" width="5%"><sup>@fonzygruen</sup>
 
 Note: 
 Heil Sauron,
-willkommen zu dieser einmaligen Veranstaltung der Bruderschaft Saurons. Wie sie sicherlich wissen, war Sauron der Herrscher über Mittelerde bis zwei unsägliche Hobbits es wagten seinen Ring der Macht im Schicksalsberg zu zerstören. Peter Jackson hat die Ereignisse seiner Zeit in einer fast 12-Stündigen Dokumentation festgehalten wo sie die Geschehnisse gut nachvollziehen können.
+willkommen zu dieser einmaligen Veranstaltung der Bruderschaft Saurons. Wie sie sicherlich wissen, war Sauron der Herrscher über Mittelerde bis zwei unsägliche Hobbits es wagten seinen Ring der Macht im Schicksalsberg zu zerstören. Peter Jackson hat die Ereignisse seiner Zeit in einer fast 12-Stündigen Dokumentation festgehalten wo sie die Geschehnisse gut nachvollziehen können. Der anstehenden Urheberrechtsreform dürfte es zu Verdanken sein, dass dieser Vortrag ein Unikum bleibne wird.
 
 Wie dem auch sei, sie sind heute hier erschienen um die Grundlagen von Saurons Macht kennen zu lernen: die Kategorientheorie. 
 
@@ -14,13 +15,13 @@ Nun ich werde mich bemühen auf die wichtigsten Aspekte einzugehen, jedoch bin i
 ??HORIZONTAL
 <img src="images/lochkarten.jpg" width="75%">
 Note:
-Uns ist es gelungen, den Menschen Sand in die Augen zu streuen. Sie glauben zu großen Teilen noch heute, dass sie Ihre Magie in kleinsten Schritten wirken und "imperativ" programmieren müssen. So als würden sie auch jeden ihrer Herzschläge bewusst ausführen. Sauron, der letzte der Maia, wäre nie so töhricht gewesen. 
+Unserer Gilde ist es gelungen, den Menschen Sand in die Augen zu streuen. Sie glauben zu großen Teilen noch heute, dass sie Ihre Magie in kleinsten Schritten wirken und "imperativ" programmieren müssen. So als würden sie auch jeden ihrer Herzschläge bewusst ausführen. Ihr lernt in der Schule das rechnen und wisst doch nicht damit umzugehen und davon zu abstrahieren.
 
 ??HORIZONTAL
 <img src="images/Sauron.jpg" width="75%">
 Note:
-Er wuste die abstrakten, arkanen Kräfte zu verstehen und zu lenken. Und genau das gleiche werdet ihr heute auch verstehen lernen.
-Jedoch gibt Sauron dieses Wissen nicht einfach so preis. Er will sich Eurer Gefolgschaft sicher sein. Er fordert von Euch den Schwur
+ Sauron, der letzte der Maia, wäre nie so töhricht gewesen. Er wuste die abstrakten, arkanen Kräfte zu verstehen und zu lenken. Und genau das gleiche werdet ihr heute auch verstehen lernen.
+Jedoch gibt Sauron dieses Wissen nicht Wegzoll preis. Er will sich Eurer Gefolgschaft sicher sein. Er fordert von Euch den Schwur
 
 
 ??HORIZONTAL
@@ -81,7 +82,7 @@ Note:
 Ihr solltet wissen: Macht zeichnet sich nicht dadurch aus, dass man eine große, komplexe Funktion schreibt. Macht bedeutet eine komplexe Funktion aus vielen kleinen überschaubaren Funktionen zusammen zu setzen.
 
 ??HORIZONTAL
-(isOdd &ordm; inc) (x) = isOdd(inc(x)) 
+## (isOdd &ordm; inc) (x) = isOdd(inc(x)) 
 
 Note:
 Wenn ich also zuerst die Inkrement-Funktion ausführe und dann die isOdd-Funktion, sagt man in der Mathematik
@@ -126,48 +127,43 @@ Aber wir wissen, dass wir keine absolute Kontrolle erlangen können, denn unser 
 ## Kategorie
 * Objekte == Datentypen
 * Morphismen == Funktionen
-* Assoziativgesetz
+* Assoziativgesetz <!-- .element: class="fragment" -->  
 Note: 
  
 Um so dringlicher, dass wir alle relevanten Gesetzmäßigkeiten einhalten. Genauer gesagt das sog. Assoziativgesetz. 
 
 
 ??HORIZONTAL
-(2 + 3) + 5 = 2 + (3 + 5)
+## (2 + 3) + 5 = 2 + (3 + 5)
 Note:
 Die Bruderschaft Saurons weiß, dass ihr Menschen schon längst das Wissen aus Eurer Grundschulzeit verdrängt habt. Zur Erinnerung, das Assoziativgesetz besagt z.B. bei der Addition, dass es keine Rolle spielt welche Summanten ich zuerst miteinandenr verechne, es kommt immer das gleiche heraus. NICHT zu verwechseln mit dem Kommutativgesetz, demzufolge es egal wäre in welcher Reihenfolge die Summanten zu addieren sind.
 
 ??HORIZONTAL
- Beispiel Kommutativ gesetzt Nicht auf Funktionen anwendbar
-
-??HORIZONTAL
-(f &ordm; g) &ordm; h = f &ordm; (g &ordm; h)
+## (f &ordm; g) &ordm; h = f &ordm; (g &ordm; h)
 Note:
 Bezogen auf das Verknüpfen von Funktionen bedeutet das, dass es wie in diesem Beispiel egal ist ob wir f nach g komponieren und dann h oder ob wir g nach h kommponieren und dieses mit f. In beiden Fällten entsteht die exakt gleiche Funktion. 
 
 ??HORIZONTAL
-#Ringbesitzer
-
-Sauron ------------>Gollum -----------> Bilbo -------------------> Frodo
-       Silmarillion         Der Hobbit         Der Herr der Ringe
-                    Gollum --------------------------------------> Frodo
-Note:
-Oder anders ausgedrückt hätte Peter Jackson sich auch die Trillogie "Der Hobbit" komplett sparen können...
+# Ringträger
+<img src="images/ringtraeger_3.jpg">
+Note: 
+Oder anders ausgedrückt ...
 
 ??HORIZONTAL
+# Ringträger
+<img src="images/ringtraeger_4.jpg">
+Note:
+... hätte Peter Jackson sich auch die Trillogie "Der Hobbit" komplett sparen können...
+
+
+??HORIZONTAL
+## Kategorie
+* Objekte == Datentypen
+* Morphismen == Funktionen
+* Assoziativgesetz
 Note:
 Wir haben jetzt gesehen, wie man Funktionen kombinieren und dadurch ersetzen kann. Dadurch dass hier die Assoziativität gilt, können wir mathematisch gesicherte Schlüsse ziehen:
 
-
-??HORIZONTAL
-<img src="images/partition_friendly.jpg" width="50%">  
-Note:
-Z.B. können wir die Aufgabe besser portionieren. Bei eine Unmenge von Orks könnten wir Gimly 20 Orks zuweisen und Legolas 20 andere Orks. Wenn Gimli in 10 Minuten zwei Orks abschlachtet und Legolas 17, dann spielt das für das Gesamtergebnis keine Rolle. Da es sich Wir könnten also für Gimli und für Legolas unterschiedliche Threads anlegen, in denen Sie Orks erledigen. 
-
-??HORIZONTAL
-<img src="images/shield-scene.gif" width="100%">
-Note:
-Oder wir bearbeiten das Problem inkrementell. Wir könnten Gimli vielleicht sogr ein Zeitfenster einrichten, in dem er die Orks nach Wertgegenständen untersucht, während Legolas jeden ankommenden Ork erlegt.
 
 
 ??HORIZONTAL
@@ -216,18 +212,40 @@ Bevor jetzt Eure Augen genauso so groß werden, weil ihr Euch fragt: "Wozu sollt
 Ihr werdet die Bedeutung eines neutralen Elements noch zu schätzen lernen...
 
 ??HORIZONTAL
+## Monoid
 <img src="images/sauron-eye.jpg" width="200%">
 Note: 
 Kümmert Euch lieber darum, was ihr dem Meister für Wissen vorführen könnt, sobald ihr ihm gegenüber tretet. Dann solltet ihr unbedingt wissen, was ein Monoid ist. 
 
 ??HORIZONTAL
-# Monoid
+## Monoid
 * ein Datentyp <!-- .element: class="fragment" -->
 * append  <!-- .element: class="fragment" -->
 * Assoziativ  <!-- .element: class="fragment" -->
 * neutrales Element  <!-- .element: class="fragment" -->
 Note:
 Ein Monoid ist eine spezielle Ausprägung der Kategorie. Allerdings ist er auf einen Datentypen eingeschränkt und daher binhaltet er auch nur einen Morphismus, also einen Homomorphismus,  den man Append nennt und welcher zwei Instanzen des Datentypes zu einer dritten zusammenfassen kann.
+
+??HORIZONTAL
+<table>
+  <tr>
+    <td>
+      <img src="images/partition_friendly.jpg" width="100%">  
+    </td> 
+    <td>
+      <h3 style="font-size:40px">Partition Friendly</h3>
+    </td>
+  </tr>
+</table>
+Note:
+Z.B. können wir die Aufgabe besser portionieren. Bei eine Unmenge von Orks könnten wir Gimly 20 Orks zuweisen und Legolas 20 andere Orks. Wenn Gimli in 10 Minuten zwei Orks abschlachtet und Legolas 17, dann spielt das für das Gesamtergebnis keine Rolle. Da es sich Wir könnten also für Gimli und für Legolas unterschiedliche Threads anlegen, in denen Sie Orks erledigen. 
+
+??HORIZONTAL
+## Incremental
+<img src="images/shield-scene.gif" width="100%">
+Note:
+Oder wir bearbeiten das Problem inkrementell. Wir könnten Gimli vielleicht sogr ein Zeitfenster einrichten, in dem er die Orks nach Wertgegenständen untersucht, während Legolas jeden ankommenden Ork erlegt.
+
 
 ??HORIZONTAL
 ``` Typescript
@@ -310,32 +328,10 @@ Note:
 Vermutlich habt ihr sogar schon mal Monoide on the fly definiert ohne es zu wissen. Hier besteht unser Monoid aus dem Datentyp "Key-Value-Pair" und einer Append-Funktion die aus den Key-Value-Pairs ein Objekt-Literal konstruiert. 
 Das neutrale Element ist hier natürlich das leere Objekt. 
 
-??HORIZONTAL
-# Polyjuice Portion
-<img src="images/poly-juice-portion.gif" width="80%">
-Note:
-Ah verdammt, falsches Universum, aber richtige Idee. Bei Harry Potter und die Kammer des Schreckens verwandelt sich Harry Potter in Goyle, einem Kumpan seines Erzfeindes Malfoy, um letzteren unbemerkt auszuspionieren. Er schafft das durch den sog. Vielsafttrank, welcher sich neben einigen exotischen Zutaten auch ein Haar desjenigen enthalten muss, in den man sich verwandeln möchte. Wichtig ist hierbei, dass dieses Haar die letzte Zutat ist, die hinzugefügt werden muss. Das ist genau das, was wir von unserer Software-Entwicklung auch wünchen. Durch eine klitzekleine Anpassung kann man völlig unterschiedliche ausprägungen erreichen und große Teile der Software einfach 1 zu 1 wiederverwenden.
 
 ??HORIZONTAL
-# Monoid
-* ein Datentyp
-* append  
-* Assoziativ  
-* neutrales Element  
-* ( Kommutativ ) <!-- .element: class="fragment" -->
-
-Note:
-Nun ist ein Monoid per definition nicht zwingend kommutativ aber niemand verbietet uns, unseren Monoiden um Kommutativität zu erweitern. Quasi so als hätten wir noch die letzte fehlende Zutat in den Vielsafttrank hinzugefügt damit er wirkt. Das bedeutet, dass wir nicht nur nach belieben uns die Arbeit im Programm einteilen können, wir können nun auch die Reihenfolge ignorieren, in der die Arbeit vollzogen wird. 
-
-??HORIZONTAL
-``` Typescript
-interface CommutativMonoid<T> extends Monoid<T> {
-    sortCriteria (a: T, b:T): -1|0|1 
-}
-```
-
-??HORIZONTAL
-# kommutative Monoiden in der Praxis
+# Monoiden in der Praxis
+* String concatenationen
 * Logging-System <!-- .element: class="fragment" -->
 * Graphik-Operationen <!-- .element: class="fragment" -->
 * Netzwerk-Operationen
@@ -349,47 +345,58 @@ Wir können uns also wie bereits angedeutet das Assoziativ-Gesetzt zunutze mache
 
 Note:
 Jetzt wissen wir also was eine Kategorie ist, und welche Regeln erfüllt sein müssen um von einer Kategorie zu sprechen. Sehen wir uns ein paar Beispiele an, wie man solche Beziehungsgeflechte Kategorisiert:
-
+<!-- evtl diesen Teil vor den Monoid ziehen?!? Henne Ei Problem... -->
 ??HORIZONTAL
 ## Initial Object
 <img src="images/sauron-fights.gif" width="100%">
+Note: Ein Beispiel ist das sogenannte Initial Object wofür der mächtige Sauron das Beste Beispiel liefert. Er hat seiner Zeit die Ringe und den einen Ring erschaffen, er ist quasi der Initiator der Welt.
 
 ??HORIZONTAL
 <img src="images/initial-object-1.jpg">
+Note:
+Man könnte also sagen, Sauron bildet den Anfang von allem. Alle Morphismen gehen von ihm aus. Er ist das Alpha...
 
 ??HORIZONTAL
 <img src="images/initial-object-2.jpg">
+Note:
+In der Categorientheorie spricht man hier von dem Einen Datentyp der nicht herzustellen ist. Das ist das Void, die Leere aus der Sauron die Welt erschuf...
     
 ??HORIZONTAL
 <img src="images/initial-object-3.jpg">
-
+Note:
+Man könnte das in der Nummerik mit der Zahl Null vergleichen. Auch sie hat große Macht inne und entscheidet über Existenz oder Nichtexistentz...
 
 ??HORIZONTAL
 ## Terminal Object
 <img src="images/gollum-falling.gif" width="100%">
+Note:
+Ganz im Gegensatz Dazu gibt es auch das Terminal Object. In unserem Fall das Nichtwürdige Wesen namens Gollum, dessen schlichter Gier und Dummheit es zu Verdanken ist, dass der Ring im Schicksalsberg vernichtet wurde. 
 
 ??HORIZONTAL
 <img src="images/terminal-object-1.jpg">   
-
+Note: 
+Er ist das Omega, der Punkt an dem alle Morphismen letztendlich enden.
 
 ??HORIZONTAL
 <img src="images/terminal-object-2.jpg">   
+Note:
+Sein Mathematisches Äquivalent ist das leere Tupel, eine selten dämliche Definition, weil man alles in ein leeres Tupel konvertieren kann.
 
 ??HORIZONTAL
 <img src="images/terminal-object-3.jpg">   
 Note:
-Ihm Gegenüber steht Gollum, der in seiner Einfallt und Schwäche nicht nur den einen Ring an die unsägichen Hobbits verloren hat, nein auf dem Schicksalsberg hat er den Ring in seiner Gier und Dummheit mit sich in den Tod gerissen.
-Alle Pfeile zeigen damit auf ihn und kein weitere Pfeil zeigt von ihm weg. Damit können wir in Terminal Object nenne.
+Der absolut unpasssende numärische Vergleich entspricht einer Eins.
 
 ??HORIZONTAL 
 # Duality
 <img src="images/gandalf-vs-saruman.png">
 Note:
-Wenn Euer Auge nicht getrübt ist, dann dürftet ihr festgestellt haben, dass der einzige Unterschied zwischen dem Initial - und dem Terminal Object die Richtung der Pfeile ist. Ganz ähnlich wie Saruman und Gandalf zwei Seiten der selben Medaille sind gilt das auch für die Richtung der Pfeile in einer Kategorie. Man spricht hier von Dualität, die für die Kategorientheorie eine handfeste bedeutung hat. Wenn ihr ein Muster des Morphismen-Geflechts findet, dann könnt ihr alleine durch das Umdrehen der Pfeilrichtung noch ein weiteres Muster finden. 
+Wenn Euer Auge nicht getrübt ist, dann dürftet ihr festgestellt haben, dass der einzige Unterschied zwischen dem Initial - und dem Terminal Object die Richtung der Pfeile ist. Ganz ähnlich wie Saruman und Gandalf zwei Seiten der selben Medaille sind gilt das auch für die Richtung der Pfeile in einer Kategorie. Man spricht hier von Dualität, die für die Kategorientheorie eine handfeste bedeutung hat. Wenn ihr ein Muster der Morphismen identifiziert habt, dann könnt ihr alleine durch das Umdrehen der Pfeilrichtung noch ein weiteres Muster finden. 
 
 ??HORIZONTAL
 # ProductType
 <img src="images/frodo-and-sam.jpg">
+
 
 ??HORIZONTAL
 <img src="images/product-type.jpg">
@@ -543,32 +550,22 @@ Trees bilden hirarchische Strukturen ab.
 usw usw.
 
 ??HORIZONTAL
-# Functors
-
+# Functor
+<img src="images/functor-frodo.png">
 Note:
 Ihr Menschen seht also die Macht des Rings manifestiert sich in Form von Algebraischen Datentypen. Jedoch erscheint ein Objekt stets in seinem Inneren verborgen. Wie also damit aggieren?
-
-
-??HORIZONTAL
-# Functor
-<img src="images/functor.png">
-Note:
 Hier sehen wir Frodo wie er erst noch in der normalen Welt existiert und von einem NazGuhl bedroht wird.
-Vor Angst steckt er sich den Ring an den Finger und verschwindet in der normalen Welt, ... 
+Vor Angst steckt er sich den Ring an den Finger und verschwindet in der normalen Welt, 
+ aber in einer art Parallelwelt taucht er wieder auf. Dort sind alle Dinge dort wie in der realen Welt, aber die NazGuhl sieht Frodo hier demaskiert als die neun Könige, deren Seelen Sauron einst durch die Ringe in seinen Bann schlug. Dann taucht er allerdings in der Parallelwelt des Rings wieder auf. 
 
 ??HORIZONTAL
-# Frodo with Ring
-
-Note:
-... aber in einer art Parallelwelt taucht er wieder auf. Dort sind alle Dinge dort wie in der realen Welt, aber die NazGuhl sieht Frodo hier demaskiert als die neun Könige, deren Seelen Sauron einst durch die Ringe in seinen Bann schlug. Dann taucht er allerdings in der Parallelwelt des Rings wieder auf. 
-
-??HORIZONTAL
-
+<img src="images/functor.jpg">
 Note:
 Der Ring agiert wie ein Functor. Es müssen 
 ??HORIZONTAL
+# Functor Laws
 I) fmap identity = identity<br><br>
-II) fmap (f &ordm; g)    = fmap f &ordm; g
+II) fmap (f &ordm; g)    = fmap f &ordm; fmap g
 
 Note:
 1. Wenn die Identity-Funktion gemapt wird ist das das gleiche wie die identity Funktion
@@ -596,7 +593,7 @@ const inc = (x) => x + 1;
 const isOdd = (x) => x % 2 === 1;
 const isNextOdd = compose(isOdd, inc)
 [1,2,3]
-  .map(isNextOdd) // liefert das gleiche Ergebnis, aber es muss nur einaml iteriert werden.
+  .map(isNextOdd) // liefert das gleiche Ergebnis
 ```
 
 Note:
@@ -606,45 +603,3 @@ Wenn ihr statt dessen aus inc und isOdd wie vorher schon in isNextOdd kombiniert
 # Equational Reasoning 
 Note:
 
-??HORIZONTAL
-Funktoren:
-Note:
-Welche gesetze gelten für Funktoren zusätzlich?
-
-??HORIZONTAL
-Problem:
-
-``` Typescript
-[1,2,3].map(inc).map(time2)
-```
-Note:
-Doof - zweimal über liste iteriert. Aber moment mal 
-da waren doch noch die Funktor gesetze: Das hieße ja:
-
-[1,2,3].map(inc).map(time2) === [1,2,3].map(compose(time2, inc))
-
-
-Wie cool ist dass denn. Heißt das ich kann hier mathematisch beweisen, dass meine Performance Optimierung keine Auswirkung hat?
-
-<beweis der funktoren gesetze für Liste>
-
-Bevor ihr mich noch überflügelt mach ich hier schluss...
-
-??HORIZONTAL
-## Gollum -> Bilbo -> Frodo
-Note:
-Oder anders ausgedrückt: Da ich 
-
-??HORIZONTAL
-## Kategorie
-* Objekte == Datentypen
-* Morphismen == Funktionen
-* Assoziativgesetz
-Note: 
-
-TODO:
-Check out fp-ts gibt es dort eine compose funktion die man klauen kann?
-
-Wie sieht vor allem die Typendefinition dafür aus.
-
-Rewrite identity in TypeScript
