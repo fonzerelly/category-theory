@@ -8,7 +8,7 @@ Note:
 Heil Sauron,
 willkommen zu dieser einmaligen Veranstaltung der Bruderschaft Saurons. Wie sie sicherlich wissen, war Sauron der Herrscher über Mittelerde bis zwei unsägliche Hobbits es wagten seinen Ring der Macht im Schicksalsberg zu zerstören. Peter Jackson hat die Ereignisse seiner Zeit in einer fast 12-Stündigen Dokumentation festgehalten wo sie die Geschehnisse gut nachvollziehen können. Der anstehenden Urheberrechtsreform dürfte es zu Verdanken sein, dass dieser Vortrag ein Unikum bleibne wird.
 
-Wie dem auch sei, sie sind heute hier erschienen um die Grundlagen von Saurons Macht kennen zu lernen: die Kategorientheorie. 
+Wie dem auch sei, sie sind heute hier erschienen um die Grundlagen von Saurons Macht kennen zu lernen: die Categoryntheorie. 
 
 Nun ich werde mich bemühen auf die wichtigsten Aspekte einzugehen, jedoch bin ich sicher, dass wir in der kurzen Zeit lediglich die Spitze des Eisbergs streifen können.
 
@@ -54,20 +54,20 @@ und ewig zu binden. ...
 ??HORIZONTAL
 Euripides: "Jeder Mann ist wie die Gesellschaft, die er gewöhnlich führt"
 Note: 
-Nun da Eure Seelen so schwarz sind wie der Schatten Saurons, kann ich Euch verraten: Die wahre Natur der Dinge erkennt man nicht durch die Dinge selbst sondern durch deren Beziehungen zu anderen Dingen. Das ist auch der wesentliche Inhalt der Kategorientheorie.
-Wir werden versuchen die Beziehungen zwischen den Objekten aufzudecken und darin Muster wieder zu erkennen versuchen. Was also ist überhaupt eine Kategorie?
+Nun da Eure Seelen so schwarz sind wie der Schatten Saurons, kann ich Euch verraten: Die wahre Natur der Dinge erkennt man nicht durch die Dinge selbst sondern durch deren Beziehungen zu anderen Dingen. Das ist auch der wesentliche Inhalt der Categoryntheorie.
+Wir werden versuchen die Beziehungen zwischen den Objekten aufzudecken und darin Muster wieder zu erkennen versuchen. Was also ist überhaupt eine Category?
 
 ??HORIZONTAL
-## Kategorie
+## Category
 * Objekte
 * Morphismen
 
 Note: 
 In der Magie sprechen wir also von Objekten und von Morphismen, welche die Objekte in Beziehung setzen.
-Eine Kategorie besteht aus einem Set von Objekten und sog. Morphismen, die die diese Objekte miteinander verbinden. 
+Eine Category besteht aus einem Set von Objekten und sog. Morphismen, die die diese Objekte miteinander verbinden. 
 
 ??HORIZONTAL
-## Kategorie
+## Category
 * Objekte == Datentypen
 * Morphismen == Funktionen
 Note: 
@@ -124,7 +124,7 @@ Doch eignet sich nicht jede Funktion für diese Art von Magie. Ihr seit weise be
 Aber wir wissen, dass wir keine absolute Kontrolle erlangen können, denn unser Programm soll ja Ausgaben machen und produziert damit zwangsläufig Seiteneffekte.
 
 ??HORIZONTAL
-## Kategorie
+## Category
 * Objekte == Datentypen
 * Morphismen == Funktionen
 * Assoziativgesetz <!-- .element: class="fragment" -->  
@@ -155,31 +155,20 @@ Oder anders ausgedrückt ...
 Note:
 ... hätte Peter Jackson sich auch die Trillogie "Der Hobbit" komplett sparen können...
 
-
 ??HORIZONTAL
-## Kategorie
-* Objekte == Datentypen
-* Morphismen == Funktionen
-* Assoziativgesetz
-Note:
-Wir haben jetzt gesehen, wie man Funktionen kombinieren und dadurch ersetzen kann. Dadurch dass hier die Assoziativität gilt, können wir mathematisch gesicherte Schlüsse ziehen:
-
-
-
-??HORIZONTAL
-## Kategorie
+## Category
 * Objekte == Datentypen
 * Morphismen == Funktionen
 * Assoziativgesetz
 * neutrales Element <!-- .element: class="fragment" -->  
 Note:
-Ein letztes Gesetz fehlt Euch Menschen noch, die Macht Saurons zu verstehen. In einer Kategorie wird ein neutrales Element benötigt. Und wer spielt in Mittelerde eine so neutrale Rolle, dass selbst Peter Jackson ihn noch nicht mal in seiner Dokumentation erwähnt?
+Ein letztes Gesetz fehlt Euch Menschen noch, die Macht Saurons zu verstehen. In einer Category wird ein neutrales Element benötigt. Und wer spielt in Mittelerde eine so neutrale Rolle, dass selbst Peter Jackson ihn noch nicht mal in seiner Dokumentation erwähnt?
 
 ??HORIZONTAL
 # Tom Bombadil
 <img src="images/tom-bombadil.jpeg" width="70%">
 Note:
-Richtig Tom Bombadil, der angeblich schon da war bevor mein Meister Sauron auf den Plan trat - lächerlich. Der angeblich nicht anfällig für die Macht des Rings war - unmöglich. Der stets Pilze konsumierende Nichtsnutz - was auch sonst... Aber gut, auch ihn brauchen wir um eine Kategorie zu konstruieren.
+Richtig Tom Bombadil, der angeblich schon da war bevor mein Meister Sauron auf den Plan trat - lächerlich. Der angeblich nicht anfällig für die Macht des Rings war - unmöglich. Der stets Pilze konsumierende Nichtsnutz - was auch sonst... Aber gut, auch ihn brauchen wir um eine Category zu konstruieren.
 
 ??HORIZONTAL
 # 5 + 0 = 5
@@ -219,32 +208,16 @@ Kümmert Euch lieber darum, was ihr dem Meister für Wissen vorführen könnt, s
 
 ??HORIZONTAL
 ## Monoid
-* ein Datentyp <!-- .element: class="fragment" -->
-* append  <!-- .element: class="fragment" -->
-* Assoziativ  <!-- .element: class="fragment" -->
-* neutrales Element  <!-- .element: class="fragment" -->
+* nur ein Datentyp <!-- .element: class="fragment" -->
+* append um den Datentyp zu verketten <!-- .element: class="fragment" -->
+* Assoziativ bzgl. append <!-- .element: class="fragment" -->
+* neutrales Element  bzgl append<!-- .element: class="fragment" -->
 Note:
-Ein Monoid ist eine spezielle Ausprägung der Kategorie. Allerdings ist er auf einen Datentypen eingeschränkt und daher binhaltet er auch nur einen Morphismus, also einen Homomorphismus,  den man Append nennt und welcher zwei Instanzen des Datentypes zu einer dritten zusammenfassen kann.
+Ein Monoid ist eine spezielle Ausprägung der Category. Allerdings ist er auf einen Datentypen eingeschränkt und daher binhaltet er auch nur einen Morphismus, also einen Homomorphismus,  den man Append nennt und welcher zwei Instanzen des Datentypes zu einer dritten zusammenfassen kann.
+Wir haben jetzt gesehen, wie man Funktionen kombinieren und dadurch ersetzen kann. Dadurch dass hier die Assoziativität gilt, können wir mathematisch gesicherte Schlüsse ziehen:
 
-??HORIZONTAL
-<table>
-  <tr>
-    <td>
-      <img src="images/partition_friendly.jpg" width="100%">  
-    </td> 
-    <td>
-      <h3 style="font-size:40px">Partition Friendly</h3>
-    </td>
-  </tr>
-</table>
-Note:
-Z.B. können wir die Aufgabe besser portionieren. Bei eine Unmenge von Orks könnten wir Gimly 20 Orks zuweisen und Legolas 20 andere Orks. Wenn Gimli in 10 Minuten zwei Orks abschlachtet und Legolas 17, dann spielt das für das Gesamtergebnis keine Rolle. Da es sich Wir könnten also für Gimli und für Legolas unterschiedliche Threads anlegen, in denen Sie Orks erledigen. 
 
-??HORIZONTAL
-## Incremental
-<img src="images/shield-scene.gif" width="100%">
-Note:
-Oder wir bearbeiten das Problem inkrementell. Wir könnten Gimli vielleicht sogr ein Zeitfenster einrichten, in dem er die Orks nach Wertgegenständen untersucht, während Legolas jeden ankommenden Ork erlegt.
+
 
 
 ??HORIZONTAL
@@ -328,13 +301,32 @@ Note:
 Vermutlich habt ihr sogar schon mal Monoide on the fly definiert ohne es zu wissen. Hier besteht unser Monoid aus dem Datentyp "Key-Value-Pair" und einer Append-Funktion die aus den Key-Value-Pairs ein Objekt-Literal konstruiert. 
 Das neutrale Element ist hier natürlich das leere Objekt. 
 
+??HORIZONTAL
+<table>
+  <tr>
+    <td>
+      <img src="images/partition_friendly.jpg" width="100%">  
+    </td> 
+    <td>
+      <h3 style="font-size:40px">Partition Friendly</h3>
+    </td>
+  </tr>
+</table>
+Note:
+Z.B. können wir die Aufgabe besser portionieren. Bei eine Unmenge von Orks könnten wir Gimly 20 Orks zuweisen und Legolas 20 andere Orks. Wenn Gimli in 10 Minuten zwei Orks abschlachtet und Legolas 17, dann spielt das für das Gesamtergebnis keine Rolle. Da es sich Wir könnten also für Gimli und für Legolas unterschiedliche Threads anlegen, in denen Sie Orks erledigen. 
 
 ??HORIZONTAL
-# Monoiden in der Praxis
-* String concatenationen
-* Logging-System <!-- .element: class="fragment" -->
-* Graphik-Operationen <!-- .element: class="fragment" -->
-* Netzwerk-Operationen
+## Incremental
+<img src="images/shield-scene.gif" width="100%">
+Note:
+Oder wir bearbeiten das Problem inkrementell. Wir könnten Gimli vielleicht sogr ein Zeitfenster einrichten, in dem er die Orks nach Wertgegenständen untersucht, während Legolas jeden ankommenden Ork erlegt.
+
+
+??HORIZONTAL
+## Monoids in practical use
+* String concats <!-- .element: class="fragment" -->
+* Logging <!-- .element: class="fragment" -->
+* Graphical operations <!-- .element: class="fragment" -->
 * Event-Streams <!-- .element: class="fragment" -->
 * ... <!-- .element: class="fragment" -->
 
@@ -343,8 +335,11 @@ Wir können uns also wie bereits angedeutet das Assoziativ-Gesetzt zunutze mache
 
 ??HORIZONTAL
 
+* Category <!-- .element: class="fragment" -->
+* Monoid <!-- .element: class="fragment" -->
+
 Note:
-Jetzt wissen wir also was eine Kategorie ist, und welche Regeln erfüllt sein müssen um von einer Kategorie zu sprechen. Sehen wir uns ein paar Beispiele an, wie man solche Beziehungsgeflechte Kategorisiert:
+Jetzt wissen wir also was eine Category ist, und welche Regeln erfüllt sein müssen um von einer Category zu sprechen. Wir haben sogars Sehen wir uns ein paar Beispiele an, wie man solche Beziehungsgeflechte Kategorisiert:
 <!-- evtl diesen Teil vor den Monoid ziehen?!? Henne Ei Problem... -->
 ??HORIZONTAL
 ## Initial Object
@@ -388,14 +383,16 @@ Note:
 Der absolut unpasssende numärische Vergleich entspricht einer Eins.
 
 ??HORIZONTAL 
-# Duality
+## Duality
 <img src="images/gandalf-vs-saruman.png">
 Note:
-Wenn Euer Auge nicht getrübt ist, dann dürftet ihr festgestellt haben, dass der einzige Unterschied zwischen dem Initial - und dem Terminal Object die Richtung der Pfeile ist. Ganz ähnlich wie Saruman und Gandalf zwei Seiten der selben Medaille sind gilt das auch für die Richtung der Pfeile in einer Kategorie. Man spricht hier von Dualität, die für die Kategorientheorie eine handfeste bedeutung hat. Wenn ihr ein Muster der Morphismen identifiziert habt, dann könnt ihr alleine durch das Umdrehen der Pfeilrichtung noch ein weiteres Muster finden. 
+Wenn Euer Auge nicht getrübt ist, dann dürftet ihr festgestellt haben, dass der einzige Unterschied zwischen dem Initial - und dem Terminal Object die Richtung der Pfeile ist. Ganz ähnlich wie Saruman und Gandalf zwei Seiten der selben Medaille sind gilt das auch für die Richtung der Pfeile in einer Category. Man spricht hier von Dualität, die für die Categoryntheorie eine handfeste bedeutung hat. Wenn ihr ein Muster der Morphismen identifiziert habt, dann könnt ihr alleine durch das Umdrehen der Pfeilrichtung noch ein weiteres Muster finden. 
 
 ??HORIZONTAL
 # ProductType
 <img src="images/frodo-and-sam.jpg">
+Note:
+Ein weiteres Beispiel bieten diese miesen kleinen Hobbitse Frodo und Sam. Man bekommt sie nur im Doppelpack. Klar gelang es einem der Nazghul sie kurzzeitig zu trennen, aber die meiste Zeit weichen Sie keinen Meter voneinander. Man kann sie also als ein eigenes Objekt betrachten, obwohl sie trennbar sind. Man nennt sowas ProductType, weil sich so gewonnene Datentyp-Kompositionen als Mal-Operation betrachten kann. 
 
 
 ??HORIZONTAL
@@ -404,8 +401,8 @@ Wenn Euer Auge nicht getrübt ist, dann dürftet ihr festgestellt haben, dass de
 ??HORIZONTAL
 <img src="images/product-type-set.jpg">
 
-Note:
-Ein weiteres Beispiel bieten diese miesen kleinen Hobbitse Frodo und Sam. Man bekommt sie nur im Doppelpack. Klar gelang es einem der Nazghul sie kurzzeitig zu trennen, aber die meiste Zeit weichen Sie keinen Meter voneinander. Man kann sie also als ein eigenes Objekt betrachten, obwohl sie trennbar sind. Man nennt sowas ProductType, weil sich so gewonnene Datentyp-Kompositionen als Mal-Operation betrachten kann. 
+??HORIZONTAL
+Der ProductType lässt sich also mit Multiplikation vergleichen  
 
 ??HORIZONTAL
 ``` Typescript
@@ -448,6 +445,9 @@ Das Gegenteil des ProductTypes, das CoProduct ist der sog. SumType. Im Gegensatz
 <img src="images/sum-type-set.jpg">
 
 ??HORIZONTAL
+Der SumType lässt sich also mit Addition vergleichen
+
+??HORIZONTAL
 ``` Typescript
 
 interface Either <T,U> {
@@ -456,17 +456,18 @@ interface Either <T,U> {
 
 class Left implements Either <number, string> {
     constructor (private value: number) {}
-    getValue() {
-        return this.value;
-    }
+    getValue() { return this.value; }
 }
 
 class Right implements Either <number, string> {
     constructor (private value: string) {}
-    getValue() {
-        return this.value;
-    }
+    getValue() { return this.value; }
 }
+
+```
+
+??HORIZONTAL
+``` Typescript
 
 function division (a: number, b: number): Either<number, string> {
     if (b === 0) {
@@ -493,10 +494,11 @@ In der Programmierung spricht man von einem Either
 * Assoziativität <!-- .element: class="fragment" -->
 * neutrales Element = void, ()<!-- .element: class="fragment" -->
 * Distributivität <!-- .element: class="fragment" -->
+* Kommutativität   <!-- .element: class="fragment" -->
 
 Note:
 Nun ihr Adepten der schwarzen Magie, könnt ihr nochmal zusammenfassen welche Eigenschaften wir nun bereits entdeckt haben? 
-* Unsere Kategorien bestehen aus Datentypen als Objekten
+* Unsere Categoryn bestehen aus Datentypen als Objekten
 * Es liegen zwei Morphismen vor, die einen ähnlichen Charakter haben wie Addition und Multiplikation
 * Beide Morphismen unterliegen der Assoziativität, d.h. sie können nach belieben kombiniert werden.
 * Es liegt ein neutrales Element vor, eigentlich sogar für beide Operationen (void für 0 und () für 1)
@@ -509,6 +511,8 @@ Nun ihr Adepten der schwarzen Magie, könnt ihr nochmal zusammenfassen welche Ei
 * Assoziativität 
 * neutrales Element = void, ()
 * Distributivität
+* Kommutativität
+
 
 Note:
 Könnt ihr es sehen? Könnt ihr die Vollkommenheit Saurons erkennen?    Wie nennen die Mathematiker so ein Konstrukt, das all diese Eigenschaften hat? 
@@ -522,7 +526,7 @@ Ja, genau das ist der eine Ring der sie alle bindet. Denn das sind die Grundlage
 * Assoziativität 
 * neutrales Element = void, ()
 * Distributivität
-* ~~ Kommutativität ~~   <!-- .element: class="fragment" -->
+* Kommutativität  
 * ~~ Inverse Element ~~   <!-- .element: class="fragment" -->
 
 Note: Oder fast. Denn genau  genommen fehlen für einen vollständigen Ring noch weitere Eigenschaften:
@@ -598,8 +602,4 @@ const isNextOdd = compose(isOdd, inc)
 
 Note:
 Wenn ihr statt dessen aus inc und isOdd wie vorher schon in isNextOdd kombiniert und damit über die Eingangsliste mapped bekommt ihr das gleiche Ergebnis aber es muss nur einmal iteriert werden.
-
-??HORIZONTAL
-# Equational Reasoning 
-Note:
 
